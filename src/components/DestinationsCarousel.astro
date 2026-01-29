@@ -5,7 +5,7 @@ const destinations = [
     name: 'Buenos Aires',
     tagline: 'The Paris of the South',
     description: 'A cosmopolitan capital blending European elegance with Latin passion.',
-    image: 'https://images.unsplash.com/photo-1612294037637-ec328d0e075e?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=800&q=80',
     href: '/real-estate/buenos-aires',
   },
   {
@@ -13,7 +13,7 @@ const destinations = [
     name: 'Mendoza',
     tagline: 'Wine Country',
     description: 'Gateway to world-renowned vineyards and the majestic Andes.',
-    image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80',
     href: '/real-estate/mendoza',
   },
   {
@@ -21,7 +21,7 @@ const destinations = [
     name: 'Bariloche',
     tagline: 'Patagonian Alps',
     description: 'Stunning landscapes with pristine lakes and snow-capped peaks.',
-    image: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80',
     href: '/real-estate/bariloche',
   },
   {
@@ -29,7 +29,7 @@ const destinations = [
     name: 'Córdoba',
     tagline: 'The Heartland',
     description: 'Colonial history meets modern innovation in Argentina\'s second city.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80',
     href: '/real-estate/cordoba',
   },
   {
@@ -37,7 +37,7 @@ const destinations = [
     name: 'Salta',
     tagline: 'The Beautiful',
     description: 'Colonial architecture meets dramatic Andean landscapes.',
-    image: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
     href: '/real-estate/salta',
   },
 ];
@@ -72,51 +72,53 @@ const destinations = [
     </div>
   </div>
 
-  <!-- Horizontal Scroll Carousel -->
-  <div class="horizontal-scroll" id="destinations-carousel">
-    {destinations.map((destination) => (
-      <div class="scroll-card w-[320px] md:w-[380px] group">
-        <a href={destination.href} class="block">
-          <div class="destination-card">
-            <!-- Image - z-index: 0 -->
-            <img
-              src={destination.image}
-              alt={destination.name}
-              class="destination-image"
-            />
+  <!-- Centered Grid Carousel -->
+  <div class="carousel-wrapper">
+    <div class="carousel-container" id="destinations-carousel">
+      {destinations.map((destination) => (
+        <div class="carousel-card group">
+          <a href={destination.href} class="block">
+            <div class="destination-card">
+              <!-- Image - z-index: 0 -->
+              <img
+                src={destination.image}
+                alt={destination.name}
+                class="destination-image"
+              />
 
-            <!-- Dark Gradient Overlay - z-index: 1 -->
-            <div class="destination-overlay"></div>
+              <!-- Dark Gradient Overlay - z-index: 1 -->
+              <div class="destination-overlay"></div>
 
-            <!-- Content - z-index: 2 -->
-            <div class="destination-content">
-              <!-- Tagline Label -->
-              <p class="destination-tagline">
-                {destination.tagline}
-              </p>
+              <!-- Content - z-index: 2 -->
+              <div class="destination-content">
+                <!-- Tagline Label -->
+                <p class="destination-tagline">
+                  {destination.tagline}
+                </p>
 
-              <!-- Location Name -->
-              <h3 class="destination-name">
-                {destination.name}
-              </h3>
+                <!-- Location Name -->
+                <h3 class="destination-name">
+                  {destination.name}
+                </h3>
 
-              <!-- Description - visible on hover -->
-              <p class="destination-description">
-                {destination.description}
-              </p>
+                <!-- Description - visible on hover -->
+                <p class="destination-description">
+                  {destination.description}
+                </p>
 
-              <!-- CTA Link -->
-              <span class="destination-link">
-                <span>View Properties</span>
-                <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </span>
+                <!-- CTA Link -->
+                <span class="destination-link">
+                  <span>View Properties</span>
+                  <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-    ))}
+          </a>
+        </div>
+      ))}
+    </div>
   </div>
 
   <div class="container-luxury">
@@ -130,16 +132,107 @@ const destinations = [
 </section>
 
 <style>
+  /* Carousel Wrapper - Centers the carousel */
+  .carousel-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 24px;
+  }
+
+  @media (min-width: 768px) {
+    .carousel-wrapper {
+      padding: 0 48px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .carousel-wrapper {
+      padding: 0 80px;
+    }
+  }
+
+  /* Carousel Container - Horizontal scroll with centered content */
+  .carousel-container {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 8px 0;
+    max-width: 1600px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .carousel-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Individual Card */
+  .carousel-card {
+    flex: 0 0 auto;
+    width: 280px;
+    scroll-snap-align: start;
+  }
+
+  @media (min-width: 640px) {
+    .carousel-card {
+      width: 320px;
+    }
+    .carousel-container {
+      gap: 28px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .carousel-card {
+      width: 340px;
+    }
+    .carousel-container {
+      gap: 32px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .carousel-card {
+      width: 300px;
+    }
+    .carousel-container {
+      justify-content: center;
+      gap: 24px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .carousel-card {
+      width: 320px;
+    }
+    .carousel-container {
+      gap: 32px;
+    }
+  }
+
   /* Card Container */
   .destination-card {
     position: relative;
-    height: 520px;
+    height: 420px;
     overflow: hidden;
+    border-radius: 4px;
   }
 
   @media (min-width: 768px) {
     .destination-card {
-      height: 600px;
+      height: 480px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .destination-card {
+      height: 520px;
     }
   }
 
@@ -156,7 +249,7 @@ const destinations = [
   }
 
   .group:hover .destination-image {
-    transform: scale(1.03);
+    transform: scale(1.05);
   }
 
   /* Dark Gradient Overlay - z-index: 1 */
@@ -166,8 +259,8 @@ const destinations = [
     z-index: 1;
     background: linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0.15) 0%,
-      rgba(0, 0, 0, 0.35) 50%,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.25) 40%,
       rgba(0, 0, 0, 0.7) 100%
     );
     transition: background 0.5s ease;
@@ -176,9 +269,9 @@ const destinations = [
   .group:hover .destination-overlay {
     background: linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(0, 0, 0, 0.4) 50%,
-      rgba(0, 0, 0, 0.75) 100%
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.35) 40%,
+      rgba(0, 0, 0, 0.8) 100%
     );
   }
 
@@ -190,7 +283,13 @@ const destinations = [
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 32px;
+    padding: 28px;
+  }
+
+  @media (min-width: 768px) {
+    .destination-content {
+      padding: 32px;
+    }
   }
 
   /* Tagline Label */
@@ -198,35 +297,41 @@ const destinations = [
     font-family: 'Montserrat', system-ui, sans-serif;
     font-size: 10px;
     font-weight: 400;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     color: #FFFFFF;
-    opacity: 0.85;
-    margin-bottom: 8px;
+    opacity: 0.9;
+    margin-bottom: 10px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   }
 
   /* Location Name */
   .destination-name {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 300;
     letter-spacing: 0.02em;
-    line-height: 1.2;
+    line-height: 1.15;
     color: #FFFFFF;
     margin-bottom: 12px;
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
   }
 
+  @media (min-width: 768px) {
+    .destination-name {
+      font-size: 32px;
+    }
+  }
+
   /* Description Text */
   .destination-description {
     font-family: 'Montserrat', system-ui, sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 300;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 20px;
-    max-width: 300px;
+    max-width: 280px;
     text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
     opacity: 0;
     transform: translateY(10px);
@@ -250,11 +355,12 @@ const destinations = [
     text-transform: uppercase;
     color: #FFFFFF;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, gap 0.3s ease;
   }
 
   .group:hover .destination-link {
     opacity: 1;
+    gap: 12px;
   }
 </style>
 
@@ -263,13 +369,22 @@ const destinations = [
   const prevBtn = document.getElementById('carousel-prev');
   const nextBtn = document.getElementById('carousel-next');
   
-  const cardWidth = 400;
+  // Get actual card width + gap dynamically
+  function getScrollAmount() {
+    const card = carousel?.querySelector('.carousel-card');
+    if (card) {
+      const style = window.getComputedStyle(carousel);
+      const gap = parseInt(style.gap) || 24;
+      return card.offsetWidth + gap;
+    }
+    return 350;
+  }
 
   prevBtn?.addEventListener('click', () => {
-    carousel?.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    carousel?.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
   });
 
   nextBtn?.addEventListener('click', () => {
-    carousel?.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    carousel?.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
   });
 </script>
