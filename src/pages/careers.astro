@@ -1,0 +1,224 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import PageHero from '../components/PageHero.astro';
+import Footer from '../components/Footer.astro';
+
+const jobs = [
+  {
+    id: 'immigration-advisor',
+    title: 'Senior Immigration Advisor',
+    type: 'Full-Time',
+    location: 'Buenos Aires, Argentina',
+    department: 'Immigration Services',
+    description: 'We are seeking an experienced Immigration Advisor to guide clients through the Argentine visa and residency process. The ideal candidate will have deep knowledge of Argentine immigration law and excellent client communication skills.',
+    requirements: [
+      'Law degree or equivalent qualification',
+      '3+ years experience in immigration law or consulting',
+      'Fluent in English and Spanish',
+      'Strong attention to detail and organizational skills',
+      'Excellent interpersonal and communication abilities',
+    ],
+  },
+  {
+    id: 'relocation-consultant',
+    title: 'Relocation Consultant',
+    type: 'Full-Time',
+    location: 'Buenos Aires, Argentina',
+    department: 'Client Services',
+    description: 'Join our team as a Relocation Consultant, helping international clients navigate their move to Argentina. You will assist with everything from finding housing to setting up local services.',
+    requirements: [
+      'Experience in relocation services or hospitality',
+      'Fluent in English and Spanish',
+      'Knowledge of Buenos Aires neighborhoods and real estate market',
+      'Strong problem-solving abilities',
+      'Valid driver\'s license preferred',
+    ],
+  },
+  {
+    id: 'real-estate-specialist',
+    title: 'Investment Property Specialist',
+    type: 'Full-Time',
+    location: 'Buenos Aires / Mendoza',
+    department: 'Real Estate',
+    description: 'We are looking for a Real Estate Specialist to help clients identify and acquire investment properties that qualify for Argentina\'s investor visa program.',
+    requirements: [
+      'Real estate license in Argentina',
+      '2+ years experience in luxury real estate',
+      'Understanding of investor visa requirements',
+      'Bilingual English/Spanish',
+      'Strong negotiation skills',
+    ],
+  },
+  {
+    id: 'client-success-manager',
+    title: 'Client Success Manager',
+    type: 'Full-Time',
+    location: 'Remote / Buenos Aires',
+    department: 'Client Services',
+    description: 'As a Client Success Manager, you will be the primary point of contact for our clients throughout their immigration journey, ensuring a seamless and positive experience.',
+    requirements: [
+      'Experience in client success or account management',
+      'Excellent written and verbal communication in English',
+      'Spanish proficiency preferred',
+      'CRM software experience',
+      'Highly organized with strong follow-up skills',
+    ],
+  },
+  {
+    id: 'marketing-coordinator',
+    title: 'Digital Marketing Coordinator',
+    type: 'Part-Time',
+    location: 'Remote',
+    department: 'Marketing',
+    description: 'We are seeking a creative Digital Marketing Coordinator to help grow our online presence and attract clients interested in Argentine residency and citizenship.',
+    requirements: [
+      'Experience in digital marketing or social media management',
+      'Proficiency with marketing tools (Google Analytics, Meta Business Suite)',
+      'Content creation and copywriting skills',
+      'Understanding of SEO best practices',
+      'Interest in immigration and international living',
+    ],
+  },
+];
+---
+
+<BaseLayout title="Careers | Argentina's Golden Visa">
+  <Header />
+  <main>
+    <PageHero 
+      title="Join Our Team"
+      subtitle="Careers"
+      description="Help people achieve their dreams of living in Argentina. We're looking for passionate individuals to join our growing team."
+      image="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80"
+      breadcrumbs={[{ label: 'Careers', href: '/careers' }]}
+    />
+
+    <!-- Why Join Us -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+          <p class="label-small mb-4">Why Work With Us</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+            Be Part of Something Meaningful
+          </h2>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+            At Argentina's Golden Visa, we help people start new chapters in their lives. Join a team that values integrity, excellence, and making a real difference in people's journeys.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center p-8">
+            <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center border border-gray-border rounded-full">
+              <svg class="w-7 h-7 text-bronze" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl text-charcoal mb-3">Global Impact</h3>
+            <p class="font-sans text-sm font-light text-gray-warm leading-relaxed">
+              Work with clients from around the world and help them achieve their international living goals.
+            </p>
+          </div>
+          <div class="text-center p-8">
+            <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center border border-gray-border rounded-full">
+              <svg class="w-7 h-7 text-bronze" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl text-charcoal mb-3">Growth & Learning</h3>
+            <p class="font-sans text-sm font-light text-gray-warm leading-relaxed">
+              Continuous professional development and opportunities to expand your expertise in immigration services.
+            </p>
+          </div>
+          <div class="text-center p-8">
+            <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center border border-gray-border rounded-full">
+              <svg class="w-7 h-7 text-bronze" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl text-charcoal mb-3">Collaborative Team</h3>
+            <p class="font-sans text-sm font-light text-gray-warm leading-relaxed">
+              Join a supportive, diverse team that values collaboration and celebrates each other's successes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury">
+        <div class="text-center mb-16">
+          <p class="label-small mb-4">Open Positions</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal">
+            Current Opportunities
+          </h2>
+        </div>
+
+        <div class="space-y-6">
+          {jobs.map((job) => (
+            <div class="bg-white border border-gray-border p-8 md:p-10 hover:shadow-lg transition-shadow duration-300">
+              <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+                <div class="flex-1">
+                  <div class="flex flex-wrap items-center gap-3 mb-3">
+                    <span class="font-sans text-[10px] font-normal tracking-luxury uppercase text-bronze">
+                      {job.department}
+                    </span>
+                    <span class="w-1 h-1 bg-gray-border rounded-full"></span>
+                    <span class="font-sans text-[10px] font-normal tracking-luxury uppercase text-gray-light">
+                      {job.type}
+                    </span>
+                  </div>
+                  <h3 class="font-serif text-2xl text-charcoal mb-2">{job.title}</h3>
+                  <p class="font-sans text-sm font-light text-gray-warm mb-4">
+                    {job.location}
+                  </p>
+                  <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+                    {job.description}
+                  </p>
+                  <div>
+                    <p class="font-sans text-sm font-normal text-charcoal mb-3">Requirements:</p>
+                    <ul class="space-y-2">
+                      {job.requirements.map((req) => (
+                        <li class="flex items-start gap-3">
+                          <svg class="w-4 h-4 text-bronze mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span class="font-sans text-sm font-light text-gray-warm">{req}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <div class="md:ml-8">
+                  <a 
+                    href={`mailto:careers@argentinasgoldenvisa.com?subject=Application: ${job.title}`}
+                    class="btn-luxury whitespace-nowrap"
+                  >
+                    Apply Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Don't See Your Role -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury text-center">
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+          Don't See Your Role?
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm max-w-xl mx-auto mb-10">
+          We're always interested in meeting talented individuals. Send us your resume and tell us how you could contribute to our mission.
+        </p>
+        <a href="mailto:careers@argentinasgoldenvisa.com?subject=General Application" class="btn-luxury">
+          Send Your Resume
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

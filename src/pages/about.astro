@@ -4,27 +4,6 @@ import Header from '../components/Header.astro';
 import PageHero from '../components/PageHero.astro';
 import Footer from '../components/Footer.astro';
 
-const team = [
-  {
-    name: 'María González',
-    role: 'Founder & CEO',
-    bio: 'Former immigration attorney with 15 years of experience helping expats relocate to Argentina.',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
-  },
-  {
-    name: 'Carlos Mendez',
-    role: 'Head of Immigration Services',
-    bio: 'Expert in Argentine immigration law, specializing in investor and retirement visas.',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
-  },
-  {
-    name: 'Sofia Ruiz',
-    role: 'Client Relations Director',
-    bio: 'Dedicated to ensuring every client receives personalized attention throughout their journey.',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80',
-  },
-];
-
 const values = [
   {
     title: 'Integrity',
@@ -39,8 +18,8 @@ const values = [
     description: 'We understand the emotional journey of relocation and provide compassionate support every step of the way.',
   },
   {
-    title: 'Results',
-    description: 'Our 98% approval rate speaks to our commitment to achieving positive outcomes for our clients.',
+    title: 'Dedication',
+    description: 'We are committed to helping you achieve your dream of living in Argentina, guiding you through every step.',
   },
 ];
 ---
@@ -51,7 +30,7 @@ const values = [
     <PageHero 
       title="About Us"
       subtitle="Our Story"
-      description="Helping dreams of Argentine residency become reality since 2015."
+      description="Helping dreams of Argentine residency become reality."
       image="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80"
       breadcrumbs={[{ label: 'About', href: '/about' }]}
     />
@@ -106,61 +85,6 @@ const values = [
               </p>
             </div>
           ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="section-padding bg-white">
-      <div class="container-luxury">
-        <div class="text-center mb-16">
-          <p class="label-small mb-4">The People Behind Our Success</p>
-          <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal">
-            Meet Our Team
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {team.map((member) => (
-            <div class="text-center">
-              <div class="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  class="w-full h-full object-cover"
-                />
-              </div>
-              <h3 class="font-serif text-xl text-charcoal mb-1">{member.name}</h3>
-              <p class="font-sans text-sm font-light text-bronze mb-4">{member.role}</p>
-              <p class="font-sans text-sm font-light text-gray-warm leading-relaxed">
-                {member.bio}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="section-padding bg-charcoal">
-      <div class="container-luxury">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <p class="font-serif text-4xl md:text-5xl text-white mb-2">500+</p>
-            <p class="font-sans text-sm font-light text-white/60 tracking-wide uppercase">Clients Served</p>
-          </div>
-          <div>
-            <p class="font-serif text-4xl md:text-5xl text-white mb-2">98%</p>
-            <p class="font-sans text-sm font-light text-white/60 tracking-wide uppercase">Approval Rate</p>
-          </div>
-          <div>
-            <p class="font-serif text-4xl md:text-5xl text-white mb-2">10+</p>
-            <p class="font-sans text-sm font-light text-white/60 tracking-wide uppercase">Years Experience</p>
-          </div>
-          <div>
-            <p class="font-serif text-4xl md:text-5xl text-white mb-2">3</p>
-            <p class="font-sans text-sm font-light text-white/60 tracking-wide uppercase">Global Offices</p>
-          </div>
         </div>
       </div>
     </section>
