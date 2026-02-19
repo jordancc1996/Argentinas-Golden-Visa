@@ -1,15 +1,23 @@
 ---
 import '../styles/global.css';
 
+const CANONICAL_BASE = 'https://www.argentinasgoldenvisa.com';
+
 interface Props {
   title?: string;
   description?: string;
+  /** Override canonical path (e.g. to drop query or trailing slash). Default: current pathname. */
+  canonicalPath?: string;
 }
 
 const { 
-  title = "Argentina's Golden Visa | Luxury Residency & Citizenship Services",
-  description = "Your gateway to Argentina. Expert guidance for investment residency, retirement visas, and citizenship in one of South America's most beautiful nations."
+  title = "Residency & Citizenship — Expert Guide | Argentina's Golden Visa",
+  description = "Your gateway to Argentina. Expert guidance for investment residency, retirement visas, and citizenship in one of South America's most beautiful nations.",
+  canonicalPath
 } = Astro.props;
+
+const pathname = typeof canonicalPath === 'string' ? canonicalPath : Astro.url.pathname;
+const canonicalUrl = pathname === '/' ? CANONICAL_BASE + '/' : CANONICAL_BASE + pathname.replace(/\/$/, '');
 ---
 
 <!doctype html>
@@ -20,10 +28,12 @@ const {
     <meta name="description" content={description} />
     <meta name="keywords" content="Argentina visa, Argentina residency, Argentina citizenship, golden visa Argentina, invest in Argentina, retire in Argentina" />
     
+    <link rel="canonical" href={canonicalUrl} />
+    
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://argentinasgoldenvisa.com" />
+    <meta property="og:url" content={canonicalUrl} />
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     
@@ -33,6 +43,7 @@ const {
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
     
     <title>{title}</title>
+    <slot name="head" />
   </head>
   <body class="font-sans font-light antialiased">
     <slot />

@@ -1,0 +1,254 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import PageHero from '../../components/PageHero.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="Tax Guide — Expat & Investor Tips | Argentina's Golden Visa"
+  description="Tax residency rules, 183-day rule, income tax, wealth tax (Bienes Personales), capital gains, double tax treaties, tax-free zones, and tax planning for expats and investors."
+>
+  <Header />
+  <main>
+    <PageHero 
+      title="Tax Advantages of Moving to Argentina: Expat & Investor Guide [2026]"
+      subtitle="Tax Guide"
+      description="Tax residency rules, income and wealth tax, capital gains, double taxation treaties, tax-free zones, and practical tax planning for foreign investors and expats."
+      image="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80"
+      breadcrumbs={[
+        { label: 'Guides', href: '/guides' },
+        { label: 'Tax Advantages', href: '/guides/tax-advantages' }
+      ]}
+    />
+
+    <!-- Introduction -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury max-w-3xl">
+        <p class="label-small mb-4">Overview</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+          Argentina Tax for Expats and Investors
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+          Argentina’s tax system can matter a lot for foreign investors and expats who obtain residency or spend time in the country. Whether you are considering the investor, rentista, or retirement visa, understanding tax residency, income tax, wealth tax (Bienes Personales), capital gains, and double taxation treaties helps you plan. This guide summarizes the rules that typically apply and how Argentina compares to other residency destinations, plus practical tips. Tax law changes frequently; always confirm current rules with the Argentine tax authority (AFIP) or a qualified tax advisor before making decisions.
+        </p>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+          Immigration status (e.g. temporary or permanent residency) is not the same as tax residency. You can hold an Argentine visa without becoming an Argentine tax resident if you do not meet the criteria below. Conversely, spending enough time in Argentina or establishing your centre of vital interests there can make you a tax resident even before you have permanent residency. Planning around both immigration and tax rules is essential.
+        </p>
+      </div>
+    </section>
+
+    <!-- Tax residency & 183-day rule -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <p class="label-small mb-4">Residency</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+              Tax Residency Rules
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              Under Argentine domestic law, you generally become an Argentine tax resident when you have a <strong class="text-charcoal font-normal">permanent home</strong> in Argentina (disponibilidad del hogar permanente), when your <strong class="text-charcoal font-normal">centre of vital interests</strong> (personal and economic ties) is in Argentina, or when you are present in Argentina for more time than in any other country in the calendar year. Foreign nationals often trigger tax residency after <strong class="text-charcoal font-normal">12 months of continuous legal residence</strong> in Argentina, even if they have short absences (e.g. up to 90 days). Obtaining permanent residency (residencia permanente) can also establish tax residency.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              Argentine citizens can lose tax residency when they acquire permanent residency in another country or remain outside Argentina for 12 consecutive months. Loss of residency can be automatic upon acquiring foreign permanent residency; reporting the change to AFIP is still advisable. Courts have clarified that legal residence status and tax residence are assessed separately; confirm your position with a local advisor.
+            </p>
+          </div>
+          <div>
+            <p class="label-small mb-4">183-day rule</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+              The 183-Day Rule
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              Argentina’s <strong class="text-charcoal font-normal">domestic</strong> rules do not rely on a simple 183-day count for determining tax residency. Residency is based on permanent home, centre of vital interests, and actual presence. In practice, 12 months of legal residence or de facto permanent stay is what usually matters for Argentine tax residency.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              The <strong class="text-charcoal font-normal">183-day rule</strong> appears in many of Argentina’s <strong class="text-charcoal font-normal">double taxation treaties</strong>. Those treaties often say that income from employment or other activities may be taxed only in the other country if you are present in Argentina for fewer than 183 days in the relevant period and meet other conditions. So the 183-day test is mainly relevant for treaty relief (e.g. avoiding Argentine tax on certain foreign-source or employment income), not for defining Argentine tax residency under local law. If you split time between Argentina and another treaty country, check the specific treaty and get advice.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Income tax & wealth tax -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div>
+            <p class="label-small mb-4">Income tax</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Income Tax Rates
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              Argentina taxes the worldwide income of tax residents. Income tax is <strong class="text-charcoal font-normal">progressive</strong>. For recent years (e.g. 2025), the scales and deductions are updated annually by AFIP. The top marginal rate has been <strong class="text-charcoal font-normal">35%</strong> on taxable income above a high threshold (e.g. in 2025, above roughly ARS 53 million after deductions). Lower brackets apply to lower income. Deductions exist for employment income, retirement and pension income (e.g. equal to a multiple of the minimum wage), and other items; the exact amounts change each year.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              Non-residents are generally taxed on Argentine-source income only, often at withholding rates that vary by type of income. Treaty provisions can reduce or exempt tax on certain income. Confirm current brackets, deduction amounts, and withholding rates with AFIP or a tax advisor.
+            </p>
+          </div>
+          <div>
+            <p class="label-small mb-4">Wealth tax</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Bienes Personales (Wealth Tax)
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              Argentina levies an annual tax on personal assets (Impuesto sobre los Bienes Personales). Tax residents are generally taxed on their worldwide assets above an exempt threshold; non-residents are typically taxed on Argentine-situated assets. The law (e.g. Law 27.743 and subsequent updates) sets scales, deductions, and exemptions. Rates are progressive; the exact thresholds and rates are updated periodically.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              A voluntary <strong class="text-charcoal font-normal">Special Advance Payment Regime</strong> (REIBP) has been available, allowing residents and certain non-residents with a local representative to make one advance payment and avoid further Bienes Personales filings and payments until a specified fiscal period (e.g. 2027). Eligibility and terms depend on current regulations; check with AFIP or an advisor before opting in.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capital gains -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury">
+        <div class="max-w-3xl">
+          <p class="label-small mb-4">Capital gains</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+            Capital Gains Treatment
+          </h2>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+            For individuals who are Argentine tax residents, capital gains are generally included in taxable income. Gains from the sale of <strong class="text-charcoal font-normal">shares</strong> can be taxed at a flat <strong class="text-charcoal font-normal">15%</strong>, with an option to use a presumed gross margin of 90% (effective rate about 13.5%) or to declare actual gains with documentation. Gains from <strong class="text-charcoal font-normal">securities listed on Argentine exchanges</strong> and from certain American or Global Depository Receipts (ADRs/GDRs) are often <strong class="text-charcoal font-normal">exempt</strong>. Gains from Argentine government or corporate bonds are typically exempt from income tax.
+          </p>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+            <strong class="text-charcoal font-normal">Real estate</strong> capital gains are taxed at 15% on actual gains for properties acquired after January 1, 2018; different rules can apply to older acquisitions. <strong class="text-charcoal font-normal">Digital assets</strong> (e.g. cryptocurrency) are subject to capital gains tax at 15% in many cases. Non-residents may be taxed on gains from Argentine-source assets, sometimes at 13.5% or 15% on gross proceeds or actual gains; treaty exemptions can apply. Non-residents in cooperative jurisdictions may be exempt from tax on certain securities gains. Always confirm current treatment with AFIP or a tax lawyer.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Double taxation treaties -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury">
+        <div class="max-w-3xl">
+          <p class="label-small mb-4">Treaties</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+            Double Taxation Treaties
+          </h2>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+            Argentina has double tax treaties (DTTs) with many countries, including Australia, Belgium, Brazil, Canada, Chile, Denmark, Finland, France, Germany, Italy, Mexico, the Netherlands, Norway, Qatar, Russia, Spain, Sweden, Switzerland, the United Arab Emirates, and the United Kingdom. Treaties with other countries may be in force or pending ratification (e.g. China, Japan, Turkey); check the current list with AFIP or the Ministry of Economy.
+          </p>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+            Under Argentina’s DTTs, tax paid abroad on foreign-source income generally qualifies for a <strong class="text-charcoal font-normal">foreign tax credit</strong> in Argentina, subject to the limit that the credit cannot exceed the Argentine tax attributable to that foreign income. Many treaties also provide that income from employment or similar activities may be taxed only in the other country if the person is present in Argentina for less than 183 days in the relevant period and meets other conditions. Treaties allocate taxing rights over different types of income (e.g. dividends, interest, royalties, capital gains); the exact result depends on the treaty and your residence status in both countries. If you have income or assets in a treaty country, obtain treaty-specific advice.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tax-free zones -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury">
+        <div class="max-w-3xl">
+          <p class="label-small mb-4">Special zones</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+            Tax-Free and Incentive Zones
+          </h2>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+            Argentina has a <strong class="text-charcoal font-normal">promotional regime for Tierra del Fuego, Antarctica, and the South Atlantic Islands</strong> (Law 19,640 and extensions). Companies that establish qualifying industrial activities in the zone can benefit from exemptions from corporate income tax, value-added tax (VAT), excise duties, and import duties, plus reduced rates on certain financial transaction taxes. The regime has been extended at least until December 2038, with possible further extension. Companies in the regime may pay a monthly contribution linked to VAT benefits. This is aimed at <strong class="text-charcoal font-normal">corporate</strong> activity in the zone, not at individuals who simply live elsewhere in Argentina.
+          </p>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              There are no broad “tax-free” zones for individuals or for all types of personal income or wealth in Argentina. If you are considering structuring a business or investment through a Tierra del Fuego entity, verify eligibility, ongoing obligations, and how your personal tax position is affected with a local advisor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison with other golden visa countries -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury">
+        <div class="max-w-3xl">
+          <p class="label-small mb-4">Comparison</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+            How Argentina Compares to Other Golden Visa Countries on Tax
+          </h2>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+            Residency programs (golden visas, investor visas, non-lucrative visas) and tax systems are separate. Holding residency in a country does not automatically make you a tax resident there; tax residency depends on domestic rules and treaties (e.g. presence, permanent home, centre of vital interests). When comparing Argentina to other destinations, both immigration and tax matter.
+          </p>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+            <strong class="text-charcoal font-normal">UAE:</strong> No personal income tax at the federal level; residency can be obtained through investment (e.g. golden visa). Often used by entrepreneurs and investors who want zero income tax. Argentina, by contrast, has progressive income tax (up to 35%) and a wealth tax on global assets for residents.
+          </p>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+            <strong class="text-charcoal font-normal">Portugal:</strong> Golden visa and other residency routes; the Non-Habitual Resident (NHR) regime offered reduced or exempt tax on certain foreign income but is being phased out or replaced. Tax residency typically follows 183 days or a permanent home. Argentina uses a 12-month / centre-of-interests approach and taxes worldwide income once you are resident.
+          </p>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+            <strong class="text-charcoal font-normal">Spain:</strong> Residency (e.g. non-lucrative) often requires proof of means and can lead to tax residency if you spend more than 183 days there or establish your centre of vital interests in Spain. Spain taxes worldwide income of residents. Argentina is similar in that residents are taxed on worldwide income and assets; the trigger for residency is different (12 months / vital interests rather than a strict 183-day rule in domestic law).
+          </p>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+            Argentina’s advantages for some expats and investors include a relatively low minimum investment or income for certain visas (investor, rentista, pensionado), a path to citizenship after two years of residency, and double tax treaties that can reduce double taxation on foreign income. Disadvantages include income and wealth tax on worldwide income and assets once you are a tax resident, and exchange-rate and inflation considerations. Choosing where to become tax resident should be based on your income and asset profile, treaty network, and long-term plans; professional advice is essential.
+          </p>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mt-6">
+            If you keep your tax residency in your home country and only visit Argentina on a visa (e.g. without reaching 12 months’ legal residence or establishing your centre of vital interests in Argentina), you may remain taxable in your home country on worldwide income and not in Argentina on the same. That can be beneficial if your home country has lower rates or better exemptions; it requires careful management of days and ties in both countries.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practical tips -->
+    <section class="section-padding bg-charcoal">
+      <div class="container-luxury">
+        <div class="max-w-3xl mx-auto">
+          <p class="font-sans text-[11px] font-normal tracking-luxury uppercase text-white/50 mb-4">Planning</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-white mb-8">
+            Practical Tips for Tax Planning
+          </h2>
+          <ul class="space-y-6">
+            <li class="flex items-start gap-4">
+              <span class="font-serif text-bronze mt-1">1.</span>
+              <div>
+                <p class="font-sans text-base font-light text-white/90 font-normal mb-1">Track your days and ties.</p>
+                <p class="font-sans text-sm font-light text-white/70 leading-relaxed">Keep a record of days spent in Argentina and in other countries. If you are close to 12 months of legal residence or have a permanent home and main ties in Argentina, assume you may be treated as a tax resident and plan accordingly. For treaty purposes, 183-day counts can matter for specific types of income.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="font-serif text-bronze mt-1">2.</span>
+              <div>
+                <p class="font-sans text-base font-light text-white/90 font-normal mb-1">Use double tax treaties.</p>
+                <p class="font-sans text-sm font-light text-white/70 leading-relaxed">If you have income or capital gains in a country that has a DTT with Argentina, check whether the treaty gives exclusive taxing right to the other country or allows a foreign tax credit in Argentina. This can reduce or avoid double tax on the same income.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="font-serif text-bronze mt-1">3.</span>
+              <div>
+                <p class="font-sans text-base font-light text-white/90 font-normal mb-1">Time income and gains where possible.</p>
+                <p class="font-sans text-sm font-light text-white/70 leading-relaxed">If you have flexibility, consider the year in which you become (or cease to be) an Argentine tax resident. Realizing large capital gains or receiving lump-sum income in a year when you are non-resident in Argentina may limit Argentine tax on that income, subject to source rules and treaties.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="font-serif text-bronze mt-1">4.</span>
+              <div>
+                <p class="font-sans text-base font-light text-white/90 font-normal mb-1">Account for Bienes Personales.</p>
+                <p class="font-sans text-sm font-light text-white/70 leading-relaxed">Wealth tax applies to residents on worldwide assets above the threshold. Factor it into your annual cost of living in Argentina and any decision to become or remain tax resident. Check whether the REIBP or other advance regimes are still available and suitable for you.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="font-serif text-bronze mt-1">5.</span>
+              <div>
+                <p class="font-sans text-base font-light text-white/90 font-normal mb-1">Get local advice before committing.</p>
+                <p class="font-sans text-sm font-light text-white/70 leading-relaxed">Argentine tax law and AFIP practice change. Rates, deductions, and exemptions are updated yearly. Before establishing tax residency, moving large assets, or relying on a treaty, obtain advice from a qualified Argentine tax advisor or international tax firm with experience in Argentina.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury text-center">
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+          Residency and Tax Planning
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm max-w-xl mx-auto mb-10">
+          We can help you understand visa options and how they interact with tax residency. For detailed tax advice, we recommend a qualified local or international tax advisor.
+        </p>
+        <a href="/contact" class="btn-luxury">
+          Get in Touch
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

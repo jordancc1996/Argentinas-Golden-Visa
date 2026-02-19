@@ -1,11 +1,14 @@
 ---
+import { Image } from 'astro:assets';
+
 const destinations = [
   {
     id: 'buenos-aires',
     name: 'Buenos Aires',
     tagline: 'The Paris of the South',
     description: 'A cosmopolitan capital blending European elegance with Latin passion.',
-    image: 'https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=800&q=80',
+    image: '/images/destination-buenos-aires.jpg',
+    alt: 'Buenos Aires skyline, expat real estate and residency destination',
     href: '/real-estate/buenos-aires',
   },
   {
@@ -13,7 +16,8 @@ const destinations = [
     name: 'Mendoza',
     tagline: 'Wine Country',
     description: 'Gateway to world-renowned vineyards and the majestic Andes.',
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80',
+    image: '/images/destination-mendoza.jpg',
+    alt: 'Mendoza wine region and Andes mountains, Argentina expat location',
     href: '/real-estate/mendoza',
   },
   {
@@ -21,7 +25,8 @@ const destinations = [
     name: 'Bariloche',
     tagline: 'Patagonian Alps',
     description: 'Stunning landscapes with pristine lakes and snow-capped peaks.',
-    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80',
+    image: '/images/destination-bariloche.jpg',
+    alt: 'Bariloche Patagonian lakes and mountains, Argentina property investment',
     href: '/real-estate/bariloche',
   },
   {
@@ -29,7 +34,8 @@ const destinations = [
     name: 'Córdoba',
     tagline: 'The Heartland',
     description: 'Colonial history meets modern innovation in Argentina\'s second city.',
-    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&q=80',
+    image: '/images/destination-cordoba.jpg',
+    alt: 'Córdoba city and heartland, Argentina second city expat living',
     href: '/real-estate/cordoba',
   },
   {
@@ -37,7 +43,8 @@ const destinations = [
     name: 'Salta',
     tagline: 'The Beautiful',
     description: 'Colonial architecture meets dramatic Andean landscapes.',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
+    image: '/images/destination-salta.jpg',
+    alt: 'Salta colonial architecture and Andean landscapes, Argentina north',
     href: '/real-estate/salta',
   },
 ];
@@ -47,13 +54,16 @@ const destinations = [
   <div class="container-luxury">
     <!-- Section Header -->
     <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-14 md:mb-20 reveal">
-      <div>
+      <div class="max-w-xl">
         <p class="label-small mb-5">
           Explore Argentina
         </p>
-        <h2 class="font-serif text-4xl md:text-5xl font-light text-charcoal tracking-wide">
+        <h2 class="font-serif text-4xl md:text-5xl font-light text-charcoal tracking-wide mb-4">
           Top Locations for Expats
         </h2>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+          Where you establish Argentina residency matters. From Buenos Aires to wine country and Patagonia, these are the regions our clients choose most when they invest in Argentina and build their life here.
+        </p>
       </div>
 
       <!-- Navigation Arrows -->
@@ -79,10 +89,13 @@ const destinations = [
         <div class="carousel-card group">
           <a href={destination.href} class="block">
             <div class="destination-card">
-              <!-- Image - z-index: 0 -->
-              <img
+              <!-- Image - z-index: 0 (below-fold, lazy) -->
+              <Image
                 src={destination.image}
-                alt={destination.name}
+                alt={destination.alt}
+                width={800}
+                height={520}
+                loading="lazy"
                 class="destination-image"
               />
 

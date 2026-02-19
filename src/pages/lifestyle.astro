@@ -8,25 +8,25 @@ const regions = [
   {
     name: 'Buenos Aires',
     tagline: 'The Paris of the South',
-    description: 'A cosmopolitan capital with world-class dining, vibrant nightlife, stunning architecture, and a rich cultural scene.',
+    description: 'A cosmopolitan capital with strong dining and nightlife, varied architecture, and a dense cultural scene.',
     image: 'https://images.unsplash.com/photo-1612294037637-ec328d0e075e?w=800&q=80',
   },
   {
     name: 'Mendoza',
     tagline: 'Wine Country',
-    description: 'Nestled at the foot of the Andes, home to world-renowned Malbec wines and stunning mountain landscapes.',
+    description: 'At the foot of the Andes, home to Malbec vineyards and mountain landscapes.',
     image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80',
   },
   {
     name: 'Bariloche',
     tagline: 'The Argentine Alps',
-    description: 'Breathtaking Patagonian beauty with crystal-clear lakes, snow-capped peaks, and Swiss-style chocolate shops.',
+    description: 'Patagonian lakes, snow-capped peaks, and alpine-style chocolate and tourism.',
     image: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80',
   },
   {
     name: 'Córdoba',
     tagline: 'The Heartland',
-    description: 'Argentina\'s second city offers colonial history, beautiful sierras, and a thriving university culture.',
+    description: 'Argentina\'s second city: colonial history, sierras, and a large university population.',
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
   },
 ];
@@ -34,38 +34,38 @@ const regions = [
 const topics = [
   {
     title: 'Healthcare',
-    description: 'Argentina boasts an excellent healthcare system with both public and private options. Private healthcare is affordable and world-class.',
+    description: 'Public and private options; private plans are relatively affordable and widely used by expats.',
     icon: '🏥',
   },
   {
     title: 'Cost of Living',
-    description: 'Enjoy a high quality of life at a fraction of US or European costs. Buenos Aires offers exceptional value for expats.',
+    description: 'Lower than most major US and European cities. See the cost breakdown by city above.',
     icon: '💰',
   },
   {
     title: 'Culture & Arts',
-    description: 'From tango to world-class museums, Argentina offers a rich cultural tapestry with European influences and Latin passion.',
+    description: 'Tango, theatre, and museums with strong European influence and local tradition.',
     icon: '🎭',
   },
   {
     title: 'Cuisine',
-    description: 'Famous for its beef, wine, and Italian-influenced cuisine. Buenos Aires has one of the world\'s best food scenes.',
+    description: 'Beef, wine, and Italian-influenced cooking. Buenos Aires has a dense restaurant scene.',
     icon: '🍷',
   },
   {
     title: 'Education',
-    description: 'Free public university education, including for foreigners. Excellent bilingual private schools available.',
+    description: 'Free public university for residents; many bilingual and international private schools.',
     icon: '🎓',
   },
   {
     title: 'Climate',
-    description: 'Four distinct seasons (reversed from Northern Hemisphere). Choose from tropical north to sub-Antarctic south.',
+    description: 'Four seasons (reversed from Northern Hemisphere), from subtropical north to cold south.',
     icon: '☀️',
   },
 ];
 ---
 
-<BaseLayout title="Lifestyle | Argentina's Golden Visa">
+<BaseLayout title="Lifestyle — Life in Argentina | Argentina's Golden Visa">
   <Header />
   <main>
     <PageHero 
@@ -82,12 +82,131 @@ const topics = [
         <div class="max-w-3xl mx-auto text-center">
           <p class="label-small mb-4">Why Argentina?</p>
           <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
-            A Land of Extraordinary Beauty and Culture
+            Life in Argentina
           </h2>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+            Argentina combines a relatively low cost of living with strong healthcare, education, and culture. Whether you choose the capital, wine country, or Patagonia, you can plan your budget and daily life with a clear picture of rent, food, transport, healthcare, and entertainment. This page gives a cost-of-living breakdown by city, quality of life factors, climate by region, education options, the social scene, safety, and a “day in the life” for Buenos Aires, Mendoza, and Bariloche.
+          </p>
           <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
-            Argentina offers an unparalleled quality of life that combines European sophistication with Latin American warmth. From the cosmopolitan streets of Buenos Aires to the serene vineyards of Mendoza, discover a country that captivates visitors and welcomes them as family.
+            All figures below are indicative in USD; actual costs depend on exchange rates, neighborhood, and lifestyle. Confirm current prices locally when planning your move.
           </p>
         </div>
+      </div>
+    </section>
+
+    <!-- Cost of Living by City -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury max-w-4xl">
+        <p class="label-small mb-4">Cost of Living</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+          Detailed Breakdown by City
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-10">
+          Monthly costs for a single person or couple living in a decent one- or two-bedroom and eating out regularly. Prices vary by zone and season; treat these as mid-range estimates.
+        </p>
+
+        <div class="space-y-12">
+          <div>
+            <h3 class="font-serif text-2xl font-light text-charcoal mb-6">Buenos Aires</h3>
+            <ul class="space-y-3 font-sans text-base font-light text-gray-warm leading-relaxed">
+              <li><strong class="font-normal text-charcoal">Rent:</strong> One-bedroom in Palermo, Recoleta, or Belgrano: roughly $600–$1,200/month. Two-bedroom $900–$1,800. Outer neighborhoods and older buildings cost less; new builds and prime streets more.</li>
+              <li><strong class="font-normal text-charcoal">Food:</strong> Groceries for two: about $300–$500/month. Dinner at a good parrilla or bistro: $15–$40 per person with wine. Lunch menus (menú del día): $8–$15.</li>
+              <li><strong class="font-normal text-charcoal">Transport:</strong> Subte and bus (SUBE): very cheap, a few dollars per day. Occasional taxi or Uber: $5–$15 across the city. No car needed in central areas.</li>
+              <li><strong class="font-normal text-charcoal">Healthcare:</strong> Private prepaga (health plan): $80–$200/month per person depending on age and coverage. Public hospitals are free but often crowded.</li>
+              <li><strong class="font-normal text-charcoal">Entertainment:</strong> Cinema $5–$10, theatre $15–$50, concerts and tango shows $20–$60. Gyms and classes $30–$80/month.</li>
+            </ul>
+            <p class="font-sans text-sm font-light text-gray-warm mt-4">Typical total for a couple (rent, utilities, food, transport, healthcare, some entertainment): $2,000–$3,500/month.</p>
+          </div>
+
+          <div>
+            <h3 class="font-serif text-2xl font-light text-charcoal mb-6">Mendoza</h3>
+            <ul class="space-y-3 font-sans text-base font-light text-gray-warm leading-relaxed">
+              <li><strong class="font-normal text-charcoal">Rent:</strong> One-bedroom in the city or Chacras de Coria: $450–$900/month. Two-bedroom $650–$1,200. Wine-country properties and gated communities command premiums.</li>
+              <li><strong class="font-normal text-charcoal">Food:</strong> Groceries slightly lower than Buenos Aires; dining out $12–$35 per person for a full meal with wine. Local markets and winery restaurants are popular.</li>
+              <li><strong class="font-normal text-charcoal">Transport:</strong> City bus and short taxi trips are inexpensive. Car useful for vineyards and mountains; fuel and insurance add $150–$300/month if you own.</li>
+              <li><strong class="font-normal text-charcoal">Healthcare:</strong> Private plans comparable to Buenos Aires, often $70–$180/month. Good hospitals in the city center.</li>
+              <li><strong class="font-normal text-charcoal">Entertainment:</strong> Wine tastings and bodega visits $20–$50. Skiing in winter (Las Leñas, etc.) and hiking in summer; gear and passes extra.</li>
+            </ul>
+            <p class="font-sans text-sm font-light text-gray-warm mt-4">Typical total for a couple: $1,800–$3,000/month.</p>
+          </div>
+
+          <div>
+            <h3 class="font-serif text-2xl font-light text-charcoal mb-6">Bariloche</h3>
+            <ul class="space-y-3 font-sans text-base font-light text-gray-warm leading-relaxed">
+              <li><strong class="font-normal text-charcoal">Rent:</strong> One-bedroom in town or near the lake: $500–$1,000/month. Two-bedroom $700–$1,400. Peak season (winter and summer) pushes short-term rents up.</li>
+              <li><strong class="font-normal text-charcoal">Food:</strong> Groceries a bit higher than the capital due to logistics; eating out $15–$40 per person. Chocolate shops and breweries are part of the scene.</li>
+              <li><strong class="font-normal text-charcoal">Transport:</strong> Local buses and taxis cover town; car or organized tours for Circuito Chico, Nahuel Huapi, and ski resorts. Budget $100–$250/month if you keep a car.</li>
+              <li><strong class="font-normal text-charcoal">Healthcare:</strong> Adequate local coverage; some expats keep a Buenos Aires–based plan or travel for specialists. Private plans roughly $80–$190/month.</li>
+              <li><strong class="font-normal text-charcoal">Entertainment:</strong> Ski passes (Cerro Catedral) and summer activities (kayaking, trekking) are the main expenses; budget $50–$150 per outing. Cafés and bars moderate.</li>
+            </ul>
+            <p class="font-sans text-sm font-light text-gray-warm mt-4">Typical total for a couple: $2,000–$3,200/month; higher in peak season.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quality of Life -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury max-w-3xl">
+        <p class="label-small mb-4">Quality of Life</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+          What Shapes Daily Life
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+          Quality of life in Argentina is driven by affordable healthcare and education, a strong café and restaurant culture, and the possibility of living without a car in Buenos Aires. In Mendoza and Bariloche, nature and outdoor activities are central. Work hours in the capital can extend into the evening; dinner often starts after 9 p.m. Weekend asados (barbecues), family lunches, and late-night socializing are normal. Public spaces—parks, plazas, waterfront—are widely used. Internet and mobile coverage are generally good in cities; in remote Patagonia or small towns, connectivity can be patchy. Bureaucracy can be slow; having a gestor or lawyer for residency and paperwork saves time.
+        </p>
+      </div>
+    </section>
+
+    <!-- Climate by Region -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury max-w-3xl">
+        <p class="label-small mb-4">Climate</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+          Climate by Region
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+          Argentina spans from the tropics to the sub-Antarctic. Seasons are reversed from the Northern Hemisphere: summer is December–February, winter June–August. <strong class="font-normal text-charcoal">Buenos Aires</strong> is humid subtropical: hot, humid summers (28–35°C), mild winters (8–15°C), and rain year-round. Spring and autumn are often the most comfortable. <strong class="font-normal text-charcoal">Mendoza</strong> is dry and continental: hot, dry summers, cold winters with little snow in the city but heavy snow in the Andes. Great for wine and outdoor activities in spring and autumn. <strong class="font-normal text-charcoal">Bariloche</strong> and Patagonia have cold, wet winters (snow, 0–10°C) and cool, dry summers (15–25°C). The north (Salta, Jujuy) is warm and dry; the far south (Ushuaia) is cold and windy year-round. Pack for layers and sun; heating in winter and air conditioning in summer are common in expat homes.
+        </p>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury max-w-3xl">
+        <p class="label-small mb-4">Education</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+          Education Options
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+          Public universities in Argentina are free for residents, including foreigners with residency. Entry is competitive and teaching is in Spanish. Private universities (e.g. in Buenos Aires, Córdoba, Mendoza) charge tuition and often offer programs in English or bilingual tracks. For school-age children, public primary and secondary education is free; quality varies by district. Many expat families choose private or bilingual schools: Buenos Aires has a wide range (British, American, German, French, and Argentine bilingual), with annual fees roughly $5,000–$15,000+ per child. Mendoza and Bariloche have fewer international options but several good private schools. Plan for application deadlines and, in the capital, possible waiting lists for popular institutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Social Scene -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury max-w-3xl">
+        <p class="label-small mb-4">Social Life</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+          Social Scene
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+          Buenos Aires has a large expat and digital-nomad community; meetups, coworking spaces, and WhatsApp groups make it easy to connect. Tango, theatre, and live music are central to social life; invitations to asados and family gatherings are common once you know people. Mendoza is smaller and more relaxed; the wine scene and outdoor clubs (hiking, cycling, skiing) are the main social anchors. Bariloche mixes tourists, seasonal workers, and long-term residents; outdoor and adventure groups are active. In all three cities, Spanish opens many doors; even basic Spanish improves daily life and integration. Learning the local rhythm—late dinners, weekend asados, and a preference for in-person contact over purely digital networks—helps you settle in.
+        </p>
+      </div>
+    </section>
+
+    <!-- Safety -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury max-w-3xl">
+        <p class="label-small mb-4">Safety</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+          Safety Overview
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+          Argentina is generally safe for residents and visitors. In Buenos Aires, petty theft (pickpocketing, bag snatching) is the main risk, especially on crowded transport, in tourist areas, and when phones or bags are left unattended. Use common sense: avoid flashing valuables, keep bags closed, and be cautious at night in unfamiliar areas. Mendoza and Bariloche have lower street crime rates than the capital; in Bariloche, driving in winter and hiking in remote areas require attention to weather and equipment. Violent crime against foreigners is rare but not unknown; stay aware of your surroundings. Emergency numbers (101 police, 107 medical) and private health coverage are recommended. Overall, expats who take normal precautions report feeling safe; discussing safety with local friends and other expats helps you learn neighborhood-specific norms.
+        </p>
       </div>
     </section>
 
@@ -128,8 +247,44 @@ const topics = [
       </div>
     </section>
 
-    <!-- Living Topics -->
+    <!-- A Day in the Life -->
     <section class="section-padding bg-white">
+      <div class="container-luxury max-w-3xl">
+        <p class="label-small mb-4">A Day in the Life</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-10">
+          Buenos Aires, Mendoza, Bariloche
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-12">
+          Snapshots of a typical day in each city—not a fixed schedule, but a sense of rhythm and options.
+        </p>
+
+        <div class="space-y-14">
+          <div>
+            <h3 class="font-serif text-2xl font-light text-charcoal mb-6">Buenos Aires</h3>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-4">
+              Morning often starts with a cortado or medialuna at a corner café; many work from home or a coworking space in Palermo or Belgrano. Lunch can be a quick menú del día or a long meal with colleagues. Afternoons might include a walk in a park (Palermo Woods, Reserva Ecológica), errands, or a siesta in summer. Evening starts late: dinner from 9 p.m. onward, either at a parrilla, a neighborhood bistro, or a friend’s asado. Nightlife runs into the early hours in San Telmo, Palermo, and Puerto Madero. Weekends add ferias (markets), matinee theatre or cinema, and lazy brunches. The city feels busy and social; public transport and taxis make it easy to move between neighborhoods without a car.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-serif text-2xl font-light text-charcoal mb-6">Mendoza</h3>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-4">
+              Days are more relaxed. Breakfast at home or at a café in the city or Chacras; work or leisure follows. Lunch is a long affair—restaurants and wineries fill from 1 p.m. onward. Afternoons are for a siesta in the heat of summer, a bike ride through vineyards, or a drive into the precordillera. In winter, a day trip to the mountains for skiing or snow is common. Dinner is later but not as late as in Buenos Aires; many cook at home and entertain with wine from the region. Weekends center on bodega visits, hiking, or cycling the wine routes. The pace is slower; the social circle is smaller and often tied to the wine and outdoor community. Having a car (or access to one) makes the most of the region.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-serif text-2xl font-light text-charcoal mb-6">Bariloche</h3>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              Mornings can start with a coffee and a view of the lake or a quick breakfast before heading to the mountain (winter) or a trail (summer). In ski season, the day revolves around Cerro Catedral; in summer, kayaking, trekking, or driving the Circuito Chico fills the hours. Lunch at a brewery, a chocolate shop, or a refugio is part of the routine. Afternoons are for rest, a stroll along the costanera, or more outdoor activity. Dinner is early by porteño standards; the town quiets down compared with the capital. Weekends attract tourists, so locals often head to quieter lakes or trails. Bariloche suits those who want nature and seasons; the social scene is smaller and more seasonal, with a mix of year-round residents and temporary workers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Living Topics -->
+    <section class="section-padding bg-cream-light">
       <div class="container-luxury">
         <div class="text-center mb-16">
           <p class="label-small mb-4">Expat Essentials</p>
@@ -155,11 +310,14 @@ const topics = [
     <!-- Cost Comparison -->
     <section class="section-padding bg-charcoal">
       <div class="container-luxury">
-        <div class="text-center mb-16">
+        <div class="text-center mb-12">
           <p class="font-sans text-[11px] font-normal tracking-luxury uppercase text-white/50 mb-4">Cost of Living</p>
-          <h2 class="font-serif text-3xl md:text-4xl font-light text-white">
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-white mb-4">
             Your Money Goes Further
           </h2>
+          <p class="font-sans text-sm font-light text-white/70 max-w-xl mx-auto">
+            Indicative benchmarks for Buenos Aires. For a full breakdown by city (rent, food, transport, healthcare, entertainment), see the Cost of Living section above.
+          </p>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -193,7 +351,7 @@ const topics = [
           Let us help you make the move to this incredible country.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="/consultation" class="btn-luxury">
+          <a href="/contact" class="btn-luxury">
             Book a Consultation
           </a>
           <a href="/guides" class="font-sans text-sm font-light tracking-widest uppercase text-charcoal hover:text-bronze transition-colors">

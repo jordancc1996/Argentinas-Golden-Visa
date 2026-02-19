@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import PageHero from '../../components/PageHero.astro';
+import Footer from '../../components/Footer.astro';
+
+const neighborhoods = [
+  { name: 'Palermo', prices: 'USD 3,500–4,300 / m²', yield: '~5–6% gross', lifestyle: 'Parks, cafés, nightlife, and dining; multiple sub-zones (Soho, Hollywood, Viejo) with a young, creative feel. Strong rental demand from expats and tourists.' },
+  { name: 'Recoleta', prices: 'USD 3,500–4,300 / m²', yield: '~4–5% gross', lifestyle: 'Elegant, historic buildings, Recoleta Cemetery, museums, and upscale shopping. Appeals to buyers seeking classic architecture and a central, prestigious address.' },
+  { name: 'Puerto Madero', prices: 'USD 5,000–6,500 / m²', yield: '~4–5% gross', lifestyle: 'Modern waterfront towers, offices, and restaurants. High-end but lower yields; suited to capital appreciation and luxury lifestyle rather than yield-focused investment.' },
+  { name: 'San Telmo', prices: 'USD 1,500–2,200 / m²', yield: '~5–6% gross', lifestyle: 'Colonial streets, antiques, tango, and the Sunday feria. Character and tourism drive demand; prices are lower than Palermo and Recoleta, with good yield potential.' },
+];
+
+const emerging = [
+  { name: 'Villa Crespo', note: 'Cobbled streets, leather heritage, and a growing scene of cafés, microbreweries, and galleries. More affordable than Palermo with a similar creative appeal.' },
+  { name: 'Chacarita', note: 'Quirky, walkable mix of colonial and Art Deco; strong food and retail scene. Lower prices and rising interest from investors and residents.' },
+  { name: 'Colegiales / Belgrano', note: 'Residential and family-oriented; Belgrano offers solid infrastructure and mid-range prices (e.g. USD 2,800–3,500 / m²) with steady demand.' },
+];
+---
+
+<BaseLayout 
+  title="Buenos Aires — Investment Guide | Argentina's Golden Visa"
+  description="Top neighborhoods (Palermo, Recoleta, Puerto Madero, San Telmo), prices per m², rental yields, legal process for foreigners, emerging areas, and investment outlook."
+>
+  <Header />
+  <main>
+    <PageHero 
+      title="Buenos Aires Real Estate: Investment Guide for Foreign Buyers [2026]"
+      subtitle="Buenos Aires"
+      description="Neighborhoods, prices per m², rental yields, legal process for foreign buyers, emerging areas, and investment outlook."
+      image="https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=1920&q=80"
+      breadcrumbs={[
+        { label: 'Real Estate', href: '/real-estate' },
+        { label: 'Buenos Aires', href: '/real-estate/buenos-aires' }
+      ]}
+    />
+
+    <!-- Introduction -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury max-w-3xl">
+        <p class="label-small mb-4">Overview</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+          Investing in Buenos Aires Property
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+          Buenos Aires is a core market for real estate investors and expats considering Argentina. The city offers a range of neighborhoods, from high-end Puerto Madero and Recoleta to more affordable San Telmo and emerging areas such as Villa Crespo and Chacarita. This guide covers top neighborhoods for investors, average property prices per square metre, rental yields, the legal process for foreigners buying property, emerging neighborhoods, lifestyle highlights by area, and a brief investment outlook. Prices and yields change with the market and exchange rate; confirm current figures with local agents or advisors before deciding.
+        </p>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+          Foreign buyers can purchase without residency; transactions are usually in USD and follow a clear notary and registration process. Choosing the right barrio and property type—and budgeting for closing costs and ongoing management—is essential for both yield-focused and lifestyle-focused investments.
+        </p>
+      </div>
+    </section>
+
+    <!-- Top neighborhoods & prices -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury">
+        <p class="label-small mb-4">Neighborhoods</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-10">
+          Top Neighborhoods for Investors
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-12 max-w-3xl">
+          The city-wide average asking price in Buenos Aires has been in the range of roughly <strong class="text-charcoal font-normal">USD 2,400–2,500 per m²</strong> in recent data; premium areas trade well above that. Below is a snapshot of four key investment neighborhoods with indicative prices per m², typical gross rental yields, and lifestyle context. Yields are gross (before management, maintenance, and vacancy); net yields often sit around 3.5–4% after those costs.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {neighborhoods.map((n) => (
+            <div class="bg-white p-8 border border-gray-border">
+              <h3 class="font-serif text-2xl text-charcoal mb-4">{n.name}</h3>
+              <p class="font-sans text-sm font-normal text-charcoal mb-2"><span class="text-gray-light">Prices:</span> {n.prices}</p>
+              <p class="font-sans text-sm font-normal text-charcoal mb-4"><span class="text-gray-light">Rental yield:</span> {n.yield}</p>
+              <p class="font-sans text-sm font-light text-gray-warm leading-relaxed">{n.lifestyle}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Rental yields -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div>
+            <p class="label-small mb-4">Yields</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Rental Yields
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              Gross rental yields in Buenos Aires vary by neighborhood and property type. City-wide averages have been cited in the range of <strong class="text-charcoal font-normal">roughly 5–7% gross</strong> for apartments, with smaller units (e.g. studios) often yielding more (e.g. around 6–8%) and larger or premium units somewhat less. Premium areas such as Puerto Madero and Recoleta often show <strong class="text-charcoal font-normal">4–5% gross</strong> yields; mid-range and character areas (e.g. San Telmo, Villa Crespo) can reach the higher end of the range.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              After property management (often 8–10% of rent), maintenance, and vacancy, <strong class="text-charcoal font-normal">net yields</strong> commonly fall to about <strong class="text-charcoal font-normal">3.5–4%</strong>. Rental law changes in recent years have affected supply and demand; confirm current market conditions and local regulations with a property manager or lawyer before projecting returns.
+            </p>
+          </div>
+          <div>
+            <p class="label-small mb-4">Legal process</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Legal Process for Foreigners Buying Property
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              Foreigners have the same property rights as Argentine citizens under the Constitution. You do not need residency or a work visa to buy; a tourist visa is sufficient. Purchases are typically made in <strong class="text-charcoal font-normal">US dollars</strong>, and funds should enter through authorized banking channels (Central Bank–compliant transfers); avoid large cash payments.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              Steps: (1) <strong class="text-charcoal font-normal">Obtain a CDI</strong> (tax ID) from AFIP using your passport and proof of address in Argentina; this can be done remotely with a local representative. (2) <strong class="text-charcoal font-normal">Hire a local lawyer</strong> to handle due diligence, taxes, and compliance. (3) Work with a <strong class="text-charcoal font-normal">notary (escribano)</strong> who drafts the deed, runs title searches, and oversees the transfer. (4) Sign the <strong class="text-charcoal font-normal">escritura pública</strong> (notarized deed). (5) <strong class="text-charcoal font-normal">Register</strong> the deed at the Property Registry (Registro de la Propiedad Inmueble). The process often takes <strong class="text-charcoal font-normal">4–6 weeks</strong>. Closing costs are typically <strong class="text-charcoal font-normal">6–9%</strong> of the purchase price (stamp tax, notary, registration); primary residence buyers may qualify for stamp tax relief. Rural and certain border-zone land remain restricted for foreigners under current law.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Emerging neighborhoods & lifestyle -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div>
+            <p class="label-small mb-4">Emerging areas</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Emerging Neighborhoods
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-8">
+              Beyond the established investment corridors, several areas attract buyers seeking lower entry prices or higher growth potential.
+            </p>
+            <ul class="space-y-6">
+              {emerging.map((e) => (
+                <li>
+                  <h3 class="font-serif text-xl text-charcoal mb-2">{e.name}</h3>
+                  <p class="font-sans text-sm font-light text-gray-warm leading-relaxed">{e.note}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p class="label-small mb-4">Lifestyle</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Lifestyle Highlights by Area
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              <strong class="text-charcoal font-normal">Palermo</strong> is known for parks (Bosques de Palermo), cafés, restaurants, and nightlife; sub-zones like Soho and Hollywood draw a young, international crowd and strong short- and long-term rental demand. <strong class="text-charcoal font-normal">Recoleta</strong> offers classic architecture, the famous cemetery, museums, and upscale shopping; it suits buyers who want a central, prestigious address.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              <strong class="text-charcoal font-normal">Puerto Madero</strong> is a modern waterfront district with high-rise apartments, offices, and dining; lifestyle is contemporary and high-end, with yields typically lower than in older neighborhoods. <strong class="text-charcoal font-normal">San Telmo</strong> has colonial streets, the Sunday antiques fair, tango, and a bohemian feel; it appeals to investors and residents who value character and tourism-linked demand at lower price points.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investment outlook -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury">
+        <div class="max-w-3xl">
+          <p class="label-small mb-4">Outlook</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+            Investment Outlook
+          </h2>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+            The Buenos Aires residential market has been in a recovery phase after a long period of price pressure. Transaction volumes have risen sharply in recent years (e.g. year-over-year increases in the range of 40% or more in some periods), and average prices in USD terms have shown modest appreciation (e.g. around 5–6% annually in recent data). Properties often sell at a small discount to asking (e.g. 93–95% of list), with time on market varying by zone and type (often 90–150 days).
+          </p>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+            Factors that can support demand include the easing of currency controls (improving access to dollars and financing), visa and residency options for investors and retirees, and the city’s appeal to digital nomads and expats. Risks include inflation, exchange-rate volatility, and changes in rental or tax regulation. Diversifying by neighborhood and budgeting for management and costs helps; always obtain local legal and tax advice before buying.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury text-center">
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+          Explore Buenos Aires Real Estate
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm max-w-xl mx-auto mb-10">
+          We can connect you with trusted agents and advisors for Buenos Aires investment. For legal and tax matters, use a qualified local lawyer and accountant.
+        </p>
+        <a href="/contact" class="btn-luxury">
+          Get in Touch
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

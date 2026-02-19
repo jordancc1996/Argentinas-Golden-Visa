@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 const pillars = [
   {
     id: 'investor',
@@ -6,6 +8,7 @@ const pillars = [
     subtitle: 'Investor Residency',
     description: 'Obtain residency through a qualifying investment in an Argentine business or venture.',
     image: '/images/investor-visa.png',
+    alt: 'Inversionista investor visa path to Argentina residency',
     href: '/visa/investor',
   },
   {
@@ -14,6 +17,7 @@ const pillars = [
     subtitle: 'Retirement Visa',
     description: 'Designed for retirees with a monthly pension looking to enjoy life in Argentina.',
     image: '/images/pensionado-visa.png',
+    alt: 'Pensionado retirement visa for retirees in Argentina',
     href: '/visa/retiree',
   },
   {
@@ -22,6 +26,7 @@ const pillars = [
     subtitle: 'Passive Income',
     description: 'For individuals with demonstrable passive income from investments or rental properties.',
     image: '/images/rentista-visa.png',
+    alt: 'Rentista visa for passive income holders in Argentina',
     href: '/visa/rentista',
   },
   {
@@ -30,6 +35,7 @@ const pillars = [
     subtitle: 'Fast-Track Citizenship',
     description: 'After just 2 years of residency, become eligible for full Argentine citizenship.',
     image: '/images/golden-visa.png',
+    alt: 'Golden visa fast-track to Argentine citizenship after residency',
     href: '/citizenship',
   },
 ];
@@ -38,14 +44,17 @@ const pillars = [
 <section class="section-padding bg-white">
   <div class="container-luxury">
     <!-- Section Header -->
-    <div class="text-center mb-20 md:mb-28 reveal">
+    <div class="text-center mb-16 md:mb-20 reveal">
       <p class="label-small mb-5">
         Your Path Forward
       </p>
       <h2 class="font-serif text-4xl md:text-5xl font-light text-charcoal tracking-wide mb-6">
-        Four Ways to Residency
+        Four Ways to Argentina Residency
       </h2>
-      <div class="divider-light"></div>
+      <div class="divider-light mb-8"></div>
+      <p class="font-sans text-base font-light text-gray-warm leading-relaxed max-w-2xl mx-auto">
+        Argentina residency can be obtained through investment, retirement income, or passive income. Each route leads to temporary and then permanent residency; after two years of permanent residency, you become eligible for the Argentina golden visa path and citizenship. Choose the option that fits your situation.
+      </p>
     </div>
 
     <!-- Grid -->
@@ -53,10 +62,13 @@ const pillars = [
       {pillars.map((pillar, index) => (
         <a href={pillar.href} class="group block bg-white">
           <div class="pillar-card">
-            <!-- Image - z-index: 0 -->
-            <img
+            <!-- Image - z-index: 0 (below-fold, lazy) -->
+            <Image
               src={pillar.image}
-              alt={pillar.title}
+              alt={pillar.alt}
+              width={800}
+              height={550}
+              loading="lazy"
               class="pillar-image"
             />
 
@@ -96,9 +108,9 @@ const pillars = [
     <!-- Bottom CTA -->
     <div class="text-center mt-20 md:mt-28 reveal">
       <p class="font-sans text-sm font-light text-gray-light mb-6">
-        Not sure which visa is right for you?
+        Not sure which visa is right for you? We help you match your profile to the right Argentina residency route—investor, retiree, or rentista—and plan for the golden visa and citizenship.
       </p>
-      <a href="/consultation" class="btn-luxury">
+      <a href="/contact" class="btn-luxury">
         Schedule a Consultation
       </a>
     </div>

@@ -1,0 +1,56 @@
+---
+const points = [
+  {
+    title: 'Expertise You Can Trust',
+    body: 'We specialize in Argentina residency and the Argentina golden visa path. Our team understands Migraciones requirements, qualifying investments, and the exact steps from first application through citizenship—so you get clear guidance, not generic advice.',
+  },
+  {
+    title: 'End-to-End Support',
+    body: 'From choosing the right visa and structuring your investment to document preparation, translations, and follow-up with authorities, we manage the process so you can focus on your move and your life in Argentina.',
+  },
+  {
+    title: 'Transparent Process',
+    body: 'We explain timelines, costs, and requirements upfront. No hidden fees, no overpromises. You will know what to expect at each stage of your Argentina residency and citizenship journey.',
+  },
+  {
+    title: 'Invest in Argentina with Clarity',
+    body: 'If you choose to invest in Argentina as part of your residency plan, we help you understand what qualifies, how to document it, and how it fits into the path toward the Argentina golden visa and citizenship.',
+  },
+];
+---
+
+<section class="section-padding bg-white">
+  <div class="container-luxury">
+    <div class="text-center mb-20 md:mb-28 reveal">
+      <p class="label-small mb-5">
+        Our Commitment
+      </p>
+      <h2 class="font-serif text-4xl md:text-5xl font-light text-charcoal tracking-wide mb-6">
+        Why Choose Us
+      </h2>
+      <div class="divider-light mb-10"></div>
+      <p class="font-sans text-base md:text-lg font-light text-gray-warm leading-relaxed max-w-2xl mx-auto">
+        Securing Argentina residency and pursuing the Argentina golden visa is a significant decision. Working with a partner who knows the system, keeps your case on track, and communicates clearly makes the difference between a smooth experience and a stressful one. Here is what we offer.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 max-w-5xl mx-auto">
+      {points.map((point) => (
+        <div class="why-choose-item reveal">
+          <h3 class="font-serif text-xl md:text-2xl font-light text-charcoal tracking-wide mb-4">
+            {point.title}
+          </h3>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+            {point.body}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-16 md:mt-24 reveal">
+      <a href="/contact" class="btn-luxury">
+        Start Your Journey
+      </a>
+    </div>
+  </div>
+</section>

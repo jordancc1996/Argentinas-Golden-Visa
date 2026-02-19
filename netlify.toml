@@ -1,0 +1,14 @@
+# Netlify: 301 redirect non-www to www
+# https://docs.netlify.com/routing/redirects/
+
+[[redirects]]
+  from = "https://argentinasgoldenvisa.com"
+  to = "https://www.argentinasgoldenvisa.com/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://argentinasgoldenvisa.com/*"
+  to = "https://www.argentinasgoldenvisa.com/:splat"
+  status = 301
+  force = true

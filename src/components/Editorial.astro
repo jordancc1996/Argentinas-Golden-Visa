@@ -1,8 +1,11 @@
 ---
+import { Image } from 'astro:assets';
+
 const featuredArticle = {
   title: 'Tax Advantages for Expats in Argentina',
   excerpt: 'Discover why Argentina is becoming a premier destination for international tax planning, with favorable policies for foreign residents.',
   image: '/images/tax-advantages.png',
+  alt: 'Tax advantages and financial planning for expats in Argentina',
   category: 'Finance',
   readTime: '8 min',
   href: '/guides/tax-advantages',
@@ -40,7 +43,10 @@ const articles = [
       <h2 class="font-serif text-4xl md:text-5xl font-light text-charcoal tracking-wide mb-6">
         The Argentina Living Guide
       </h2>
-      <div class="divider-light"></div>
+      <div class="divider-light mb-8"></div>
+      <p class="font-sans text-base font-light text-gray-warm leading-relaxed max-w-xl mx-auto">
+        Practical guides on tax, banking, healthcare, and culture for anyone building a life and securing Argentina residency.
+      </p>
     </div>
 
     <!-- Editorial Grid -->
@@ -49,10 +55,13 @@ const articles = [
       <div class="lg:col-span-7">
         <a href={featuredArticle.href} class="group block">
           <div class="featured-card">
-            <!-- Image - z-index: 0 -->
-            <img
+            <!-- Image - z-index: 0 (below-fold, lazy) -->
+            <Image
               src={featuredArticle.image}
-              alt={featuredArticle.title}
+              alt={featuredArticle.alt}
+              width={800}
+              height={550}
+              loading="lazy"
               class="featured-image"
             />
 

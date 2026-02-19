@@ -1,0 +1,273 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import PageHero from '../../components/PageHero.astro';
+import Footer from '../../components/Footer.astro';
+
+const steps = [
+  { number: '01', title: 'Prepare documentation', timeline: '2–4 weeks', description: 'Gather passport, criminal clearances, proof of funds, and draft your investment plan.' },
+  { number: '02', title: 'Define and document the investment', timeline: '2–6 weeks', description: 'Choose a qualifying activity, secure commitments or titles, and prepare evidence of the investment amount and its legal origin.' },
+  { number: '03', title: 'Request an appointment', timeline: '1–3 weeks', description: 'Schedule your filing with Migraciones (in-country) or prepare a consular application from abroad.' },
+  { number: '04', title: 'Submit the application', timeline: '1 day', description: 'Present the complete file in person at the National Directorate of Migration or at the Argentine consulate.' },
+  { number: '05', title: 'Review and decision', timeline: '2–4 months', description: 'Migraciones reviews the investment plan and supporting documents; additional information may be requested.' },
+  { number: '06', title: 'Receive residency', timeline: '1–2 weeks', description: 'Upon approval, you receive temporary residency and can complete DNI procedures.' },
+];
+
+const documents = [
+  'Valid passport (full copy, minimum 6 months validity)',
+  'Birth certificate (apostilled or legalized)',
+  'Criminal record certificate from country of residence (apostilled/legalized)',
+  'Criminal record certificate from Argentina if resident more than 6 months in the last 3 years',
+  'Proof of legal origin of funds (bank statements, tax returns, sale deeds, or other supporting evidence)',
+  'Evidence of the investment: titles, contracts, or project documentation showing the amount and nature of the investment',
+  'Investment plan or project description (productive, commercial, or service activity)',
+  'Proof of address in Argentina (if applying in-country)',
+  'Payment of the applicable migration fee (UMSM-based)',
+];
+
+const faqs = [
+  { q: 'What is the minimum investment for the Argentina Investor Visa?', a: 'The minimum investment is set in Argentine pesos: ARS 1,500,000. The equivalent in USD depends on the exchange rate at the time of application; confirm the current amount with Migraciones or your legal advisor. Investments must be in productive, commercial, or service activities of interest to the country, not passive real estate or donations.' },
+  { q: 'How long does the Investor Visa application take?', a: 'From submission to decision, processing often takes 2–4 months. Preparation of documents and the investment plan can add 1–2 months. Delays are possible if additional information is requested or if appointments are delayed.' },
+  { q: 'Can I work or run a business with the Investor Visa?', a: 'Yes. The Visa Inversionista is an active investor visa. You are expected to manage or oversee your investment and may work in the activity tied to your residency. It is a temporary residency that can be renewed and can lead to permanent residency and citizenship after meeting the usual residence and other requirements.' },
+  { q: 'Do I need to be in Argentina to apply?', a: 'You can start the process from abroad through an Argentine consulate, or apply in Argentina at the Dirección Nacional de Migraciones if you are already in the country on a valid stay. Requirements and procedures may differ slightly between consular and in-country filing.' },
+  { q: 'What happens after my temporary residency is granted?', a: 'Your initial residency is temporary (typically one to three years depending on the current regulations). You must maintain the investment and comply with residence and tax rules. After the required period of temporary residency (typically three years), you may apply for permanent residency. Citizenship may be possible after two years of residency, subject to language and other requirements.' },
+];
+---
+
+<BaseLayout 
+  title="Investor Visa — Complete 2026 Guide | Argentina's Golden Visa"
+  description="Eligibility, minimum investment (USD and ARS), application process, required documents, fees, and FAQs for Argentina's Visa Inversionista (Investor Visa)."
+>
+  <Header />
+  <main>
+    <PageHero 
+      title="Argentina Investor Visa: Complete Guide [2026]"
+      subtitle="Visa Inversionista"
+      description="Eligibility, investment requirements, step-by-step process, and what you need to apply for temporary residency through investment in Argentina."
+      image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80"
+      breadcrumbs={[
+        { label: 'Visa Options', href: '/visa-options' },
+        { label: 'Investor Visa', href: '/visa/investor' }
+      ]}
+    />
+
+    <!-- Introduction -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury max-w-3xl">
+        <p class="label-small mb-4">Overview</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+          Residency Through Investment
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+          Argentina’s Investor Visa (Visa de Inversionista or Permiso de Ingreso Temporario como Inversionista) is a temporary residency permit for people who make a qualifying investment in productive, commercial, or service activities in Argentina. It is administered by the Dirección Nacional de Migraciones and is one of several pathways to legal residence that can later lead to permanent residency and citizenship.
+        </p>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+          The visa is intended for active investors: you are expected to manage or oversee the activity in which you invest. Passive holdings or donations alone do not qualify. The investment must be documented and traceable, and you must be able to show that the funds have a legal origin. Once temporary residency is granted, you can renew it, apply for permanent residency after the required period (typically three years), and, if you meet the residence and other conditions, apply for Argentine citizenship after two years of residency.
+        </p>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+          This guide covers eligibility, minimum investment amounts in USD and ARS, the application process and typical timelines, the required documents checklist, processing fees, practical tips, and answers to common questions. Rules and amounts can change; always confirm current requirements with Migraciones or a qualified immigration lawyer before applying.
+        </p>
+      </div>
+    </section>
+
+    <!-- Eligibility -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <p class="label-small mb-4">Eligibility</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+              Who Can Apply
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              Applicants must be of legal age and intend to invest in an activity considered of interest to Argentina. You must prove the legal origin of the funds and that the investment meets the minimum amount and type required by current regulations. There is no nationality restriction; non-MERCOSUR nationals pay a higher migration fee than MERCOSUR and associated states.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              Migraciones may request evidence that the investment is real and will be carried out: contracts, incorporation documents, project descriptions, or proof of capital already deployed. Health insurance valid in Argentina is often required for temporary residency; confirm with the consulate or Migraciones. Applicants who have spent significant time in Argentina may need a local criminal record certificate in addition to that from their country of residence.
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-4">
+                <svg class="w-5 h-5 text-bronze mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="font-sans text-base font-light text-gray-warm">Legal age and capacity to contract</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <svg class="w-5 h-5 text-bronze mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="font-sans text-base font-light text-gray-warm">Clean criminal record in country of residence and, when applicable, in Argentina</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <svg class="w-5 h-5 text-bronze mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="font-sans text-base font-light text-gray-warm">Investment in a productive, commercial, or service activity (not passive real estate or donations only)</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <svg class="w-5 h-5 text-bronze mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="font-sans text-base font-light text-gray-warm">Proof of legal origin of funds and ability to complete the investment</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="label-small mb-4">Minimum Investment</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+              Amounts (USD and ARS)
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              The minimum investment is set in Argentine law in local currency. Migraciones requires a minimum of <strong class="text-charcoal font-normal">ARS 1,500,000</strong> (one million five hundred thousand Argentine pesos) in a productive, commercial, or service activity. The equivalent in US dollars varies with the exchange rate; at typical rates in recent years the amount has often been in the range of approximately <strong class="text-charcoal font-normal">USD 1,500–6,000</strong>, but you must confirm the current USD equivalent at the time of application.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              Some government-backed or sector-specific programs (e.g. under decrees such as 366/2025) may set higher minimums in USD for certain projects (e.g. real estate development, tech, or agro-industry). If you are considering such a route, verify the exact amount and conditions with the implementing authority or your advisor.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              The peso amount (ARS 1,500,000) is the legal reference; the USD range given here is indicative. Exchange rates in Argentina can move sharply, so obtain a current conversion or confirmation from a bank, Migraciones, or your lawyer before locking in your investment plan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step-by-step process -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury">
+        <div class="text-center mb-16">
+          <p class="label-small mb-4">Application Process</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal">
+            Step-by-Step Process and Timelines
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {steps.map((step) => (
+            <div class="bg-cream-light p-8 border border-gray-border">
+              <p class="font-serif text-4xl text-bronze/30 mb-4">{step.number}</p>
+              <p class="font-sans text-[10px] font-normal tracking-luxury uppercase text-gray-light mb-2">{step.timeline}</p>
+              <h3 class="font-serif text-xl text-charcoal mb-3">{step.title}</h3>
+              <p class="font-sans text-sm font-light text-gray-warm leading-relaxed">
+                {step.description}
+              </p>
+            </div>
+          ))}
+        </div>
+        <p class="font-sans text-base font-light text-gray-warm mt-10 max-w-2xl mx-auto text-center">
+          Total time from preparation to approval is often 4–6 months. Request appointment slots by email at tramitacion.ingresos@migraciones.gob.ar when applying at Migraciones headquarters. If you apply from abroad, the consulate will set the procedure (document submission, interview, and collection of the visa). In all cases, submit a complete file; incomplete applications lead to requests for additional information and longer processing.
+        </p>
+      </div>
+    </section>
+
+    <!-- Required documents -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury">
+        <div class="max-w-2xl">
+          <p class="label-small mb-4">Required Documents</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+            Document Checklist
+          </h2>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-8">
+            Documents must be apostilled or legalized where required and, when not in Spanish, translated by a certified translator. Requirements can vary by consulate or office; use this list as a base and confirm with Migraciones or your lawyer. Criminal records are usually valid for a limited period (e.g. three to six months from issue); time your application so they do not expire before submission. Keep copies of everything you submit and note the date and place of filing for your records.
+          </p>
+          <ul class="space-y-4">
+            {documents.map((doc) => (
+              <li class="flex items-start gap-4">
+                <svg class="w-5 h-5 text-bronze mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="font-sans text-base font-light text-gray-warm">{doc}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fees and success tips -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div>
+            <p class="label-small mb-4">Costs</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Processing Fees
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              Migration fees are set in UMSM (Unidad de Medida Salarial Mínima), a unit tied to the minimum wage. For temporary residency as an investor, non-MERCOSUR applicants typically pay <strong class="text-charcoal font-normal">100 UMSM</strong>; MERCOSUR and associated states pay a lower rate (e.g. 50 UMSM). The amount in pesos changes when the UMSM value is updated. Check the current tariff at the official Migraciones site (Cuadro de Tasas Migratorias, Decreto 584/2024 and any later updates).
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              Budget separately for apostilles, certified translations, notary fees, and any legal or advisory fees. Consulates may charge their own processing or authentication fees; ask when you request the application packet.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              Visa validity and renewal terms are set by Migraciones. Initial temporary residency is often granted for one year and can be renewed for longer periods (e.g. three years). After the required years of temporary residency, you may apply for permanent residency; citizenship requires two years of residency plus Spanish and other requirements. Plan your timeline and travel so that you comply with any minimum stay or tax-residency rules that apply to your situation.
+            </p>
+          </div>
+          <div>
+            <p class="label-small mb-4">Practical Advice</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Success Tips
+            </h2>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-4">
+                <span class="font-serif text-bronze mt-1">1.</span>
+                <span class="font-sans text-base font-light text-gray-warm">Start early: collect criminal clearances and apostilles well in advance; they can take several weeks.</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="font-serif text-bronze mt-1">2.</span>
+                <span class="font-sans text-base font-light text-gray-warm">Use a lawyer or agent experienced in Argentine investor visas to align your investment structure and documents with current criteria.</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="font-serif text-bronze mt-1">3.</span>
+                <span class="font-sans text-base font-light text-gray-warm">Keep a clear paper trail: bank transfers, contracts, and titles that show the amount, origin, and use of funds.</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="font-serif text-bronze mt-1">4.</span>
+                <span class="font-sans text-base font-light text-gray-warm">Present a concrete investment plan: describe the activity, timeline, and how the minimum amount is deployed.</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <span class="font-serif text-bronze mt-1">5.</span>
+                <span class="font-sans text-base font-light text-gray-warm">Book your Migraciones appointment as soon as you have a complete file; wait times can extend processing.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-padding bg-charcoal">
+      <div class="container-luxury">
+        <div class="text-center mb-16">
+          <p class="font-sans text-[11px] font-normal tracking-luxury uppercase text-white/50 mb-4">FAQ</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-white">
+            Frequently Asked Questions
+          </h2>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-10">
+          {faqs.map((faq) => (
+            <div class="border-b border-white/20 pb-10 last:border-0 last:pb-0">
+              <h3 class="font-serif text-xl text-white mb-4">{faq.q}</h3>
+              <p class="font-sans text-base font-light text-white/80 leading-relaxed">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury text-center">
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+          Discuss Your Investor Visa Options
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm max-w-xl mx-auto mb-10">
+          Our team can help you understand requirements, investment structures, and the application process for the Visa Inversionista.
+        </p>
+        <a href="/contact" class="btn-luxury">
+          Get in Touch
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

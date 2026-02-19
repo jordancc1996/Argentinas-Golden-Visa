@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import PageHero from '../../components/PageHero.astro';
+import Footer from '../../components/Footer.astro';
+
+const areas = [
+  { name: 'Mendoza city center', prices: '~USD 1,000–1,200 / m²', note: 'Apartments and houses; access to restaurants, shops, and the Metrotranvia. Steady long-term and short-term demand from tourists and professionals.' },
+  { name: 'Chacras de Coria', prices: 'Premium to city', note: 'Luján de Cuyo district; tree-lined streets, wineries, and restaurants. Strong Airbnb performance (e.g. higher ADR and revenue than city). Lifestyle and wine-tourism appeal.' },
+  { name: 'Valle de Uco', prices: 'Varies by parcel and use', note: 'High-altitude wine region; vineyards, boutique hotels, and land. Rural land may be subject to foreign-ownership restrictions; confirm with a lawyer before buying.' },
+];
+
+const propertyTypes = [
+  { type: 'Vineyards and fincas', desc: 'Working or lifestyle vineyards; often in Luján de Cuyo or Valle de Uco. Rural land is subject to Ley 26.737 restrictions on foreign ownership; structures and urban-zoned parcels may be easier for foreigners. Due diligence is essential.' },
+  { type: 'Urban (city and towns)', desc: 'Apartments and houses in Mendoza city, Chacras de Coria, Godoy Cruz, and other towns. No special restrictions for foreigners. Suited to long-term rental or short-term (Airbnb) with wine-tourism demand.' },
+  { type: 'Mountain retreats', desc: 'Homes and lots in the precordillera or near Potrerillos, Uspallata, or ski areas. Mix of vacation use and rental potential; access and services vary by location.' },
+];
+---
+
+<BaseLayout 
+  title="Mendoza — Wine Country Investing | Argentina's Golden Visa"
+  description="Wine country lifestyle, property types (vineyards, urban, mountain retreats), average prices, rental and Airbnb potential, buying process, top areas (city, Chacras de Coria, Valle de Uco), and investment potential."
+>
+  <Header />
+  <main>
+    <PageHero 
+      title="Mendoza Real Estate: Wine Country Investment Guide [2026]"
+      subtitle="Mendoza"
+      description="Wine country lifestyle, property types, prices, rental and Airbnb potential, buying process, top areas, and investment outlook."
+      image="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&q=80"
+      breadcrumbs={[
+        { label: 'Real Estate', href: '/real-estate' },
+        { label: 'Mendoza', href: '/real-estate/mendoza' }
+      ]}
+    />
+
+    <!-- Introduction -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury max-w-3xl">
+        <p class="label-small mb-4">Overview</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+          Investing in Mendoza Property
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+          Mendoza is Argentina’s wine capital and a growing market for real estate investors and lifestyle buyers. The province offers urban apartments and houses, vineyard and finca properties, and mountain retreats, with a mix of long-term rental demand and short-term (Airbnb) potential driven by wine tourism. This guide covers the wine country lifestyle, property types and average prices, the rental market and Airbnb potential, the buying process for foreigners, top areas (city center, Chacras de Coria, Valle de Uco), and investment potential. Prices and regulations change; confirm current figures and legal status of rural land with local agents and a lawyer before buying.
+        </p>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+          Urban purchases in Mendoza city and in towns like Chacras de Coria follow the same notary and registration process as in the rest of Argentina; rural and vineyard acquisitions require extra care because of ownership restrictions and title issues.
+        </p>
+      </div>
+    </section>
+
+    <!-- Wine country lifestyle & property types -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div>
+            <p class="label-small mb-4">Lifestyle</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Wine Country Lifestyle
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              Mendoza draws visitors and residents for its bodegas, mountain views, and relaxed pace. The city of Mendoza has restaurants, parks, and cultural life; nearby districts such as <strong class="text-charcoal font-normal">Chacras de Coria</strong> and <strong class="text-charcoal font-normal">Luján de Cuyo</strong> offer a village feel with wineries, tastings, and dining. <strong class="text-charcoal font-normal">Valle de Uco</strong> is a high-altitude wine region with premium vineyards and a growing hospitality and real estate scene. The precordillera and areas like Potrerillos attract buyers seeking mountain or lake access. This combination supports both primary residence and vacation-rental demand.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              Infrastructure is improving: the Metrotranvia extension toward the airport is advancing, and wine routes and tourism facilities are well established. Investors and lifestyle buyers often target Chacras de Coria for its balance of accessibility and wine-country character, or the city center for lower entry prices and steady rental demand.
+            </p>
+          </div>
+          <div>
+            <p class="label-small mb-4">Property types</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Vineyards, Urban, and Mountain Retreats
+            </h2>
+            <ul class="space-y-6">
+              {propertyTypes.map((p) => (
+                <li>
+                  <h3 class="font-serif text-xl text-charcoal mb-2">{p.type}</h3>
+                  <p class="font-sans text-sm font-light text-gray-warm leading-relaxed">{p.desc}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Average prices & top areas -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury">
+        <p class="label-small mb-4">Prices and areas</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-10">
+          Average Prices and Top Areas
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-10 max-w-3xl">
+          In recent data, Mendoza property has been quoted at roughly <strong class="text-charcoal font-normal">USD 1,000–1,200 per m²</strong> in the city; apartments often at the higher end of that range and houses lower (e.g. around USD 450/m² in some reports). Median home prices have been cited around <strong class="text-charcoal font-normal">USD 75,000</strong>, with entry-level homes in the <strong class="text-charcoal font-normal">USD 30,000–55,000</strong> range and luxury estates from <strong class="text-charcoal font-normal">USD 300,000</strong> upward. Vineyard and Valle de Uco prices depend on size, location, and whether the land is classified as rural; confirm with local listings and a lawyer.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {areas.map((a) => (
+            <div class="bg-cream-light p-8 border border-gray-border">
+              <h3 class="font-serif text-xl text-charcoal mb-3">{a.name}</h3>
+              <p class="font-sans text-sm font-normal text-charcoal mb-4">{a.prices}</p>
+              <p class="font-sans text-sm font-light text-gray-warm leading-relaxed">{a.note}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Rental market & Airbnb -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div>
+            <p class="label-small mb-4">Rental market</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Rental Market and Airbnb Potential
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              Long-term gross rental yields in Mendoza have been cited in the range of <strong class="text-charcoal font-normal">5–7%</strong>, in line with many Argentine cities. Demand comes from students, professionals, and expats; wine tourism and seasonal visitors support <strong class="text-charcoal font-normal">short-term rentals</strong>. Mendoza has a large number of active Airbnb listings; regulation of short-term rentals has been relatively light, though local rules can change.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              <strong class="text-charcoal font-normal">Chacras de Coria</strong> and <strong class="text-charcoal font-normal">Luján de Cuyo</strong> often outperform the city in short-term revenue: higher average daily rates and strong occupancy during harvest and peak season. City-center listings can achieve moderate occupancy with lower rates. Top performers in wine-country zones can generate meaningfully higher monthly revenue than the provincial median. Budget for management, cleaning, and possible regulation (e.g. registration or tax) when projecting Airbnb income.
+            </p>
+          </div>
+          <div>
+            <p class="label-small mb-4">Buying process</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Buying Process for Foreigners
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              Foreigners have the same rights as Argentine citizens to buy <strong class="text-charcoal font-normal">urban</strong> property in Mendoza: apartments, houses, and homes in towns such as Chacras de Coria. No residency or work visa is required; a tourist visa is enough. Steps mirror the rest of Argentina: (1) Obtain a <strong class="text-charcoal font-normal">CDI</strong> (tax ID) from AFIP, typically in 1–2 weeks, with passport and proof of address. (2) Hire a <strong class="text-charcoal font-normal">local lawyer</strong> (often 1–2% of purchase price) for due diligence and compliance. (3) Work with a <strong class="text-charcoal font-normal">notary (escribano)</strong> for the deed, title search, and transfer. (4) Sign the <strong class="text-charcoal font-normal">escritura pública</strong> and (5) <strong class="text-charcoal font-normal">register</strong> at the Property Registry. Transactions are in <strong class="text-charcoal font-normal">USD</strong>; funds must enter through authorized banking channels.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              Total transaction costs are typically <strong class="text-charcoal font-normal">6–11%</strong> (transfer tax, notary, registration, and often 3% plus VAT for the agent). <strong class="text-charcoal font-normal">Rural land</strong> (vineyards, agricultural parcels) is subject to Ley 26.737; a 2023 decree that attempted to loosen foreign ownership caps was suspended by courts, so the status of foreign purchase of rural land remains contested. If you are considering a vineyard or finca, obtain clear legal advice before committing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investment potential -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury">
+        <div class="max-w-3xl">
+          <p class="label-small mb-4">Outlook</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+            Investment Potential
+          </h2>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+            Mendoza is often cited as a favorable market for buyers: entry prices are lower than in Buenos Aires, and wine tourism and quality of life support both capital appreciation and rental income. In recent years, inventory has increased (e.g. 15–27% in some comparisons), giving buyers room to negotiate; reported discounts to list price have been in the range of 8–18% (e.g. around 12% on average). Gross yields of 5–7% and annual appreciation potential in the low to mid single digits (e.g. 3–7%) are commonly mentioned, though past performance does not guarantee future results.
+          </p>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+            Factors that can support the market include lower national inflation than in the recent past, the appeal of wine country to expats and tourists, and infrastructure improvements. Risks include exchange-rate volatility, changes in short-term rental regulation, and the uncertain legal status of foreign ownership of rural land. For urban and town properties—especially in Chacras de Coria and the city center—the path for foreigners is clear; for vineyards and Valle de Uco land, legal advice is essential before investing.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury text-center">
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+          Explore Mendoza Real Estate
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm max-w-xl mx-auto mb-10">
+          We can connect you with trusted agents and advisors for Mendoza. For legal and tax matters, use a qualified local lawyer and accountant.
+        </p>
+        <a href="/contact" class="btn-luxury">
+          Get in Touch
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import PageHero from '../../components/PageHero.astro';
+import Footer from '../../components/Footer.astro';
+
+const areas = [
+  { name: 'Llao Llao', prices: 'Premium', note: 'Peninsula and resort area on Nahuel Huapi; iconic hotel, lake views, and forest. High demand from luxury buyers and short-term renters; among the most expensive zones in Bariloche.' },
+  { name: 'Circuito Chico', prices: 'Premium to mid-range', note: 'Scenic loop along the lake; chalets and homes with views. Strong seasonal rental demand for skiing and summer; access to trails and water activities.' },
+  { name: 'City center', prices: '~USD 2,500–3,000 / m² (indicative)', note: 'Apartments and some houses; shops, restaurants, and services. More affordable than lakefront; steady long-term and tourist rental demand.' },
+];
+
+const propertyTypes = [
+  { type: 'Lakefront properties', desc: 'Homes and lots on Nahuel Huapi or nearby lakes; Llao Llao and Circuito Chico are prime. Premium prices and strong seasonal rental potential; some parcels may fall in the border zone and require Previa Conformidad for foreign buyers.' },
+  { type: 'Ski and mountain', desc: 'Chalets and apartments near Cerro Catedral or along access roads. Winter demand peaks during the ski season (June–October); summer and autumn attract hikers and nature visitors. Yields are seasonal.' },
+  { type: 'Urban (city center)', desc: 'Apartments and townhouses in Bariloche proper. Lower entry than lakefront; suited to long-term rental or short-term (Airbnb) for tourists who prefer walkable access to amenities.' },
+];
+---
+
+<BaseLayout 
+  title="Bariloche — Patagonia Investing | Argentina's Golden Visa"
+  description="Lakefront properties, ski market, seasonal rental yields, top neighborhoods (Llao Llao, Circuito Chico, city center), adventure tourism economics, average prices, buying process for foreigners, investment outlook."
+>
+  <Header />
+  <main>
+    <PageHero 
+      title="Bariloche Real Estate: Patagonia Investment Guide [2026]"
+      subtitle="Bariloche / Patagonia"
+      description="Lakefront and ski market, seasonal rentals, top areas, adventure tourism economics, prices, buying process, and investment outlook."
+      image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80"
+      breadcrumbs={[
+        { label: 'Real Estate', href: '/real-estate' },
+        { label: 'Bariloche', href: '/real-estate/bariloche' }
+      ]}
+    />
+
+    <!-- Introduction -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury max-w-3xl">
+        <p class="label-small mb-4">Overview</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+          Investing in Bariloche and Patagonia
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+          San Carlos de Bariloche is Argentina’s main Patagonian lake and ski destination and a distinct real estate market from Buenos Aires or Mendoza. The city sits on the shore of Lake Nahuel Huapi in Río Negro and is the country’s self-styled “National Capital of Adventure Tourism,” with Cerro Catedral as South America’s largest ski resort. This guide covers lakefront properties, the ski market, seasonal rental yields, top neighborhoods (Llao Llao, Circuito Chico, city center), adventure tourism economics, average prices, the buying process for foreigners—including the important border-zone rule—and investment outlook. Bariloche is seasonal and tourism-driven; confirm current prices and legal requirements with local agents and a lawyer before buying.
+        </p>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+          Foreigners can own residential property in Bariloche (apartments, houses, chalets, condos) in their own name on a tourist visa, but many properties fall inside a border security zone and require prior approval from the Ministry of Interior before title transfer. Checking this early avoids delays and failed deals.
+        </p>
+      </div>
+    </section>
+
+    <!-- Lakefront, ski, property types -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div>
+            <p class="label-small mb-4">Market drivers</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Lakefront Properties and the Ski Market
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              <strong class="text-charcoal font-normal">Lakefront</strong> homes and lots on Nahuel Huapi and nearby lakes command the highest prices and appeal to lifestyle buyers and short-term renters. The <strong class="text-charcoal font-normal">Llao Llao</strong> peninsula and the <strong class="text-charcoal font-normal">Circuito Chico</strong> (the scenic loop along the lake) are the main premium corridors; the iconic Llao Llao Hotel and the views over the lake and forests define the area. Demand is strong in winter (ski season) and in summer for water sports, hiking, and scenery.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              The <strong class="text-charcoal font-normal">ski market</strong> centers on Cerro Catedral and the access roads and villages. Chalets and apartments near the mountain fill in winter (roughly June–October) and can achieve high nightly rates; occupancy and revenue are strongly seasonal. Off-season (spring and early summer) still draws visitors for trekking, fishing, and nature, but yields are uneven across the year. Investors should model cash flow on a seasonal basis and budget for management and maintenance during low season.
+            </p>
+          </div>
+          <div>
+            <p class="label-small mb-4">Property types</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Lakefront, Ski, and Urban
+            </h2>
+            <ul class="space-y-6">
+              {propertyTypes.map((p) => (
+                <li>
+                  <h3 class="font-serif text-xl text-charcoal mb-2">{p.type}</h3>
+                  <p class="font-sans text-sm font-light text-gray-warm leading-relaxed">{p.desc}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seasonal yields, top areas, prices -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury">
+        <p class="label-small mb-4">Yields and areas</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-10">
+          Seasonal Rental Yields and Top Neighborhoods
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-10 max-w-3xl">
+          Rental income in Bariloche is <strong class="text-charcoal font-normal">seasonal</strong>: winter (ski) and summer (lake and trails) generate most short-term demand. Gross yields are often quoted in a range similar to other Argentine tourism markets (e.g. mid-single digits on an annualized basis), but monthly revenue varies sharply by season. Well-located lakefront and ski-close properties can achieve strong weekly rates in peak periods; city-center apartments offer more stable, year-round occupancy at lower nightly rates. Budget for vacancy and lower revenue in shoulder seasons when projecting returns.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {areas.map((a) => (
+            <div class="bg-cream-light p-8 border border-gray-border">
+              <h3 class="font-serif text-xl text-charcoal mb-3">{a.name}</h3>
+              <p class="font-sans text-sm font-normal text-charcoal mb-4">{a.prices}</p>
+              <p class="font-sans text-sm font-light text-gray-warm leading-relaxed">{a.note}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Adventure tourism, average prices, buying process -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div>
+            <p class="label-small mb-4">Tourism</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Adventure Tourism Economics
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              Bariloche is one of Argentina’s top tourist destinations and the main hub for Patagonian lake and mountain travel. The economy is heavily tourism-dependent; Congress has designated the city the “National Capital of Adventure Tourism” and the “National Capital of Chocolate.” Infrastructure is long established (e.g. decades of development), and the calendar is filled with events (craft beer festival, chocolate festival, and others) that help spread demand across the year.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              Activities drive demand for accommodation: <strong class="text-charcoal font-normal">skiing</strong> at Cerro Catedral, water sports and sailing on Nahuel Huapi, trekking and climbing, and fishing. This supports both hotel and short-term rental demand. Scientific and university activity in Bariloche adds a small base of long-term tenants. Real estate values and rental income are tied to the health of tourism and to exchange rates affecting international visitors.
+            </p>
+          </div>
+          <div>
+            <p class="label-small mb-4">Prices and process</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Average Prices and Buying Process for Foreigners
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              In recent data, <strong class="text-charcoal font-normal">city-center apartments</strong> in Bariloche have been quoted at around <strong class="text-charcoal font-normal">USD 2,500–2,850 per m²</strong>; lakefront and premium zones trade above that. Lakefront properties have been cited with annual appreciation in the range of 4–7%. Well-priced listings often sell at 4–6% below ask; stale listings can see 10–12% discounts. Apartments typically sell in about 60–120 days and single-family homes in 120–210 days.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              <strong class="text-charcoal font-normal">Buying process:</strong> (1) Obtain a <strong class="text-charcoal font-normal">CDI or CUIT</strong> (tax ID) from AFIP. (2) Confirm whether the property is in the <strong class="text-charcoal font-normal">Zona de Seguridad de Fronteras</strong>; if so, obtain <strong class="text-charcoal font-normal">Previa Conformidad</strong> from the Ministry of Interior before closing—without it, the transfer to a foreign buyer cannot be completed. (3) Hire a <strong class="text-charcoal font-normal">lawyer</strong> and work with a <strong class="text-charcoal font-normal">notary</strong> for the deed and title search. (4) Sign the <strong class="text-charcoal font-normal">escritura</strong> and <strong class="text-charcoal font-normal">register</strong> at the Property Registry. Closing costs are typically <strong class="text-charcoal font-normal">5–8%</strong> of the purchase price (e.g. Río Negro stamp tax around 2.5%, plus notary and registration). Property taxes are often <strong class="text-charcoal font-normal">USD 150–1,200 per year</strong> depending on the asset.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investment outlook -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury">
+        <div class="max-w-3xl">
+          <p class="label-small mb-4">Outlook</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+            Investment Outlook
+          </h2>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+            Bariloche appeals to investors and second-home buyers who want exposure to Patagonian lakes and skiing and who accept seasonal cash flow and tourism risk. Lakefront and Circuito Chico assets have shown solid appreciation in recent data; city-center apartments offer lower entry and more stable occupancy. The border-zone rule is a legal hurdle that must be cleared before committing; not all properties are eligible for foreign transfer, so due diligence is essential.
+          </p>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+            Strengths include Bariloche’s position as the leading Patagonian destination, year-round appeal (winter ski, summer lake and trails), and limited supply of prime lakefront land. Risks include dependence on tourism and exchange rates, seasonality of rental income, and possible regulatory changes affecting short-term rentals. Investors should model seasonal revenue, factor in Previa Conformidad and closing costs, and use a local lawyer with experience in Bariloche and border-zone transactions.
+          </p>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+            Compared with Buenos Aires or Mendoza, Bariloche is a smaller, more seasonal market with a higher share of second homes and vacation rentals. Entry prices and yields vary widely by location; lakefront and ski-close assets command a premium and require a clear understanding of the legal and tax framework before purchase.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury text-center">
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+          Explore Bariloche Real Estate
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm max-w-xl mx-auto mb-10">
+          We can connect you with trusted agents and advisors for Bariloche and Patagonia. For legal and border-zone matters, use a lawyer experienced in Río Negro and foreign buyers.
+        </p>
+        <a href="/contact" class="btn-luxury">
+          Get in Touch
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

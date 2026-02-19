@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import PageHero from '../../components/PageHero.astro';
+import Footer from '../../components/Footer.astro';
+
+const legalGuides = [
+  { title: 'Visa Options', href: '/visa-options', description: 'An overview of pathways to Argentine residency: investor, retirement, rentista, and digital nomad visas. Compare timelines, requirements, and which option fits your situation.' },
+  { title: 'Argentina Investor Visa', href: '/visa/investor', description: 'Eligibility, minimum investment (USD and ARS), step-by-step process, required documents, fees, and FAQs. For those seeking residency through a qualifying business or productive investment.' },
+  { title: 'Argentina Retirement Visa', href: '/visa/retiree', description: 'Who qualifies, minimum pension requirements, documents (apostilled and translated), application process, timeline, healthcare for retirees, and visa holder FAQs.' },
+  { title: 'Argentina Rentista Visa', href: '/visa/rentista', description: 'Income thresholds, proof of income, eligible sources, application steps, renewal, path to permanent residency, and comparison with the investor visa.' },
+];
+
+const financialGuides = [
+  { title: 'Tax Advantages', href: '/guides/tax-advantages', description: 'Tax residency rules, the 183-day rule, income and wealth tax (Bienes Personales), capital gains, double taxation treaties, tax-free zones, and how Argentina compares to other residency destinations. Practical tax planning tips for expats and investors.' },
+  { title: 'Banking', href: '/guides/banking', description: 'Requirements for opening a bank account as a foreigner, best banks for expats, USD accounts, the blue dollar vs official rate, Wise and Western Union, crypto regulations, credit cards, and practical tips.' },
+];
+
+const lifestyleGuides = [
+  { title: 'Healthcare', href: '/guides/healthcare', description: 'Public vs private care (obras sociales vs prepagas), top private plans for expats, hospital quality in Buenos Aires and beyond, costs vs US/EU, prescriptions, dental, emergency services, and health insurance requirements for visa holders.' },
+];
+
+const comparisonGuides = [
+  { title: 'Argentina vs Portugal Golden Visa (2026)', href: '/guides/argentina-vs-portugal-golden-visa', description: 'Compare investment minimums, processing times, tax regimes, path to citizenship, cost of living, lifestyle, language, healthcare, and real estate. Summary table included.' },
+  { title: 'Argentina vs Panama Residency [2026]', href: '/guides/argentina-vs-panama-residency', description: 'Complete comparison: investment minimums, processing times, tax (territorial vs worldwide), citizenship path, cost of living, lifestyle, language, healthcare, and real estate. Summary table included.' },
+];
+---
+
+<BaseLayout 
+  title="Relocation Guides — Plan Your Move | Argentina's Golden Visa"
+  description="Hub for Argentina relocation guides: visa options, investor and retirement visas, tax, banking, healthcare, and practical tips for expats and investors."
+>
+  <Header />
+  <main>
+    <PageHero 
+      title="Argentina Relocation Guides: Everything You Need to Know"
+      subtitle="Guides"
+      description="Legal and visa, financial, and lifestyle guides to help you plan your move to Argentina."
+      image="https://images.unsplash.com/photo-1589909202802-8f4aadce1849?w=1920&q=80"
+      breadcrumbs={[{ label: 'Guides', href: '/guides' }]}
+    />
+
+    <!-- Introduction -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury max-w-3xl">
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+          Relocating to Argentina—whether for residency, investment, or retirement—goes more smoothly when you understand visa rules, tax and banking, and day-to-day essentials like healthcare. Knowing how residency, tax residency, and local systems work helps you avoid delays, extra cost, and last-minute surprises. The guides below cover legal and visa options, financial planning, and lifestyle topics so you can prepare with clear, practical information. Use them as a starting point; always confirm current requirements with official sources or professional advisors before making decisions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Legal & Visa -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury">
+        <p class="label-small mb-4">Legal & Visa</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-10">
+          Residency and Visa Guides
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {legalGuides.map((guide) => (
+            <a href={guide.href} class="block bg-white p-8 border border-gray-border hover:border-bronze transition-colors group">
+              <h3 class="font-serif text-xl text-charcoal mb-3 group-hover:text-bronze transition-colors">{guide.title}</h3>
+              <p class="font-sans text-sm font-light text-gray-warm leading-relaxed">{guide.description}</p>
+              <span class="inline-block mt-4 font-sans text-xs font-normal tracking-widest uppercase text-bronze">Read guide →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Financial -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury">
+        <p class="label-small mb-4">Financial</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-10">
+          Tax and Banking
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {financialGuides.map((guide) => (
+            <a href={guide.href} class="block bg-cream-light p-8 border border-gray-border hover:border-bronze transition-colors group">
+              <h3 class="font-serif text-xl text-charcoal mb-3 group-hover:text-bronze transition-colors">{guide.title}</h3>
+              <p class="font-sans text-sm font-light text-gray-warm leading-relaxed">{guide.description}</p>
+              <span class="inline-block mt-4 font-sans text-xs font-normal tracking-widest uppercase text-bronze">Read guide →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Lifestyle -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury">
+        <p class="label-small mb-4">Lifestyle</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-10">
+          Healthcare and Daily Life
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {lifestyleGuides.map((guide) => (
+            <a href={guide.href} class="block bg-white p-8 border border-gray-border hover:border-bronze transition-colors group">
+              <h3 class="font-serif text-xl text-charcoal mb-3 group-hover:text-bronze transition-colors">{guide.title}</h3>
+              <p class="font-sans text-sm font-light text-gray-warm leading-relaxed">{guide.description}</p>
+              <span class="inline-block mt-4 font-sans text-xs font-normal tracking-widest uppercase text-bronze">Read guide →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparisons -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury">
+        <p class="label-small mb-4">Comparisons</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-10">
+          Argentina vs Other Programs
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {comparisonGuides.map((guide) => (
+            <a href={guide.href} class="block bg-cream-light p-8 border border-gray-border hover:border-bronze transition-colors group">
+              <h3 class="font-serif text-xl text-charcoal mb-3 group-hover:text-bronze transition-colors">{guide.title}</h3>
+              <p class="font-sans text-sm font-light text-gray-warm leading-relaxed">{guide.description}</p>
+              <span class="inline-block mt-4 font-sans text-xs font-normal tracking-widest uppercase text-bronze">Read guide →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury text-center">
+        <p class="font-sans text-base font-light text-gray-warm max-w-xl mx-auto mb-10">
+          Not sure where to start? We can help you choose the right visa and plan your relocation.
+        </p>
+        <a href="/contact" class="btn-luxury">
+          Get in Touch
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

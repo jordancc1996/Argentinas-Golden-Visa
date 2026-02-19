@@ -1,0 +1,4 @@
+# Netlify _redirects (alternative to netlify.toml)
+# 301 non-www to www
+https://argentinasgoldenvisa.com    https://www.argentinasgoldenvisa.com/    301
+https://argentinasgoldenvisa.com/*  https://www.argentinasgoldenvisa.com/:splat    301

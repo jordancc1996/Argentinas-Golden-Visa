@@ -1,0 +1,278 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import PageHero from '../../components/PageHero.astro';
+import Footer from '../../components/Footer.astro';
+
+const steps = [
+  { number: '01', title: 'Gather and legalize documents', timeline: '2–6 weeks', description: 'Obtain passport, birth certificate, criminal clearances, and proof of passive income. Have documents apostilled or consularly legalized and translated by a certified translator.' },
+  { number: '02', title: 'Prepare proof of income', timeline: '1–3 weeks', description: 'Collect bank statements, rental contracts, investment statements, or accountant letters showing regular passive income at or above the required threshold.' },
+  { number: '03', title: 'Enter Argentina or contact consulate', timeline: 'As needed', description: 'Apply in Argentina via RaDEX after entry (and, when required, after transferring funds to an Argentine bank), or start at an Argentine consulate abroad.' },
+  { number: '04', title: 'Complete the application (RaDEX or consulate)', timeline: '1–2 weeks', description: 'Upload or submit the required documents, pay the migration fee, and secure an appointment with Migraciones or the consulate.' },
+  { number: '05', title: 'Attend the appointment', timeline: '1 day', description: 'Present originals, answer any questions, and provide additional information if requested.' },
+  { number: '06', title: 'Receive decision', timeline: '2–6 months', description: 'Migraciones or the consulate reviews the file. Upon approval, you receive temporary residency and can complete DNI procedures.' },
+];
+
+const incomeSources = [
+  'Rental income from property (with deeds, lease agreements, and proof of payments received)',
+  'Investment dividends or distributions from shares or funds',
+  'Interest or returns from bank deposits or securities (Argentine or foreign)',
+  'Income from company investments or holdings abroad, where you do not perform active work',
+  'Other regular passive income that can be documented and is not salary or employment income',
+];
+
+const documents = [
+  'Valid passport (full copy, minimum 6 months validity)',
+  'Birth certificate (apostilled or legalized by the Argentine consulate)',
+  'Criminal record certificate from country of residence (apostilled or consularly legalized)',
+  'Criminal record certificate from Argentina (if you have resided in Argentina for 6+ months in the last 3 years)',
+  'Proof of passive income: bank statements (typically 6–12 months), investment statements, or certified accountant letter summarizing income sources and amounts',
+  'For rental income: property deeds or titles, rental contracts, and bank transfer receipts or statements showing rent received',
+  'Proof that income is passive (e.g. not employment or self-employment in Argentina)',
+  'Proof of address in Argentina (when applying in-country) and, when required, evidence of funds transferred to an Argentine bank (e.g. 2–3 months of income)',
+  'Payment of the applicable migration fee (UMSM-based)',
+];
+
+const faqs = [
+  { q: 'What is the minimum income for the Argentina Rentista Visa?', a: 'The minimum passive income is typically expressed as approximately five times the Argentine minimum wage, or about USD 1,500–2,000 per month per applicant. The amount in pesos (e.g. ARS 36,000–40,000 or more per month, depending on the year) is set by Migraciones and may be updated. Confirm the current figure with Migraciones or your consulate. Income must be from passive sources (rentals, investments, dividends), not from employment.' },
+  { q: 'What income sources qualify for the Rentista visa?', a: 'Qualifying sources include rental income from real estate, dividends or distributions from investments, interest from bank deposits or securities, and income from holdings or investments abroad where you do not perform active work. Salary, freelance work, or active business income in Argentina generally do not qualify. You must document the source and regularity of the income with bank statements, contracts, or certified accountant letters.' },
+  { q: 'How do I renew the Rentista visa and when can I apply for permanent residency?', a: 'The initial Rentista residency is usually granted for one year. You can renew it (often for a second and third year) by proving that you still receive the required passive income. After the required period of temporary residency (typically three years), you may apply for permanent residency. Citizenship may be possible after two years of permanent residency, subject to language and other requirements.' },
+  { q: 'What is the difference between the Rentista and Investor visas?', a: 'The Rentista visa is for people who live on passive income (rentals, dividends, interest) from existing assets; you do not need to run a business or make a new investment in Argentina. The Investor (Inversionista) visa requires a qualifying investment in a productive, commercial, or service activity in Argentina and is aimed at people who will manage or oversee that investment. Minimum amounts and proof differ: Rentista is based on monthly income; Investor is based on a one-time or deployed investment amount.' },
+  { q: 'Do I need to transfer money to an Argentine bank for the Rentista visa?', a: 'Migraciones or the consulate may require you to deposit the equivalent of two or three months of your declared income in an Argentine bank regulated by the Central Bank (BCRA). Requirements can vary by office and year. Confirm whether a transfer is required and the exact amount with Migraciones or your lawyer before applying.' },
+];
+---
+
+<BaseLayout 
+  title="Rentista Visa — Passive Income Guide | Argentina's Golden Visa"
+  description="Income thresholds, proof of income, eligible sources, application steps, renewal, path to permanent residency, comparison with Investor visa, and FAQs for Argentina's Rentista visa."
+>
+  <Header />
+  <main>
+    <PageHero 
+      title="Argentina Rentista Visa: Passive Income Residency Guide [2026]"
+      subtitle="Visa Rentista"
+      description="Income thresholds, proof of income, eligible sources, application steps, renewal process, and path to permanent residency."
+      image="https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=1920&q=80"
+      breadcrumbs={[
+        { label: 'Visa Options', href: '/visa-options' },
+        { label: 'Rentista Visa', href: '/visa/rentista' }
+      ]}
+    />
+
+    <!-- Introduction -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury max-w-3xl">
+        <p class="label-small mb-4">Overview</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+          Residency Based on Passive Income
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+          Argentina’s Rentista Visa (Visa Rentista or Permiso de Ingreso Temporario como Rentista) is a temporary residency permit for people who can prove a stable passive income from sources such as rentals, investments, or dividends—rather than from employment or an active business in Argentina. It is administered by the Dirección Nacional de Migraciones and allows you to live in Argentina without working locally, using income earned abroad or from passive assets.
+        </p>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+          The Rentista category is distinct from the Pensionado (retirement) visa, which requires a pension from a government or international organization, and from the Inversionista (investor) visa, which requires an active investment in a productive activity in Argentina. If your income comes from real estate rentals, securities, or other passive holdings and you do not need to run a business in Argentina, the Rentista visa may be the appropriate option. You must meet the minimum income threshold, document the source and regularity of that income, and comply with apostille and translation requirements for your documents.
+        </p>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+          Applications can be started from abroad at an Argentine consulate or in Argentina after entry, using the RaDEX system to upload documents and request an appointment with Migraciones. Processing times and document lists can differ slightly between consular and in-country procedures; confirm the current steps with the office that will handle your case.
+        </p>
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+          This guide covers income thresholds, proof-of-income documentation, eligible income sources, application steps, the renewal process, the path to permanent residency, a comparison with the investor visa, and answers to common questions. Rules and amounts can change; confirm current requirements with Migraciones or a qualified immigration lawyer before applying.
+        </p>
+      </div>
+    </section>
+
+    <!-- Income thresholds & eligible sources -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <p class="label-small mb-4">Income requirement</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+              Income Thresholds
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              Migraciones sets the minimum passive income in Argentine pesos, often expressed as a multiple of the minimum wage (e.g. five times the minimum wage). In recent years the requirement has frequently been cited as approximately <strong class="text-charcoal font-normal">USD 1,500–2,000 per month</strong> per applicant, or the peso equivalent (e.g. ARS 36,000–40,000 or more per month, depending on the year and the official minimum wage). The exact figure is updated periodically; confirm the current amount with Migraciones or your Argentine consulate.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              Income must be regular and verifiable. If you include dependents (e.g. spouse, children under a certain age), Migraciones may require a higher total income. Some offices also require you to transfer the equivalent of two or three months of income to an Argentine bank regulated by the Central Bank (BCRA); confirm whether this applies to your case.
+            </p>
+          </div>
+          <div>
+            <p class="label-small mb-4">Eligible sources</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+              Eligible Income Sources
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              The Rentista visa is for <strong class="text-charcoal font-normal">passive</strong> income: money you receive from assets or investments without performing active work. Employment salary, freelance fees, or income from running a business in Argentina do not qualify. Acceptable sources include the following.
+            </p>
+            <ul class="space-y-4">
+              {incomeSources.map((source) => (
+                <li class="flex items-start gap-4">
+                  <svg class="w-5 h-5 text-bronze mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="font-sans text-base font-light text-gray-warm">{source}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proof of income documentation -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury">
+        <div class="max-w-2xl">
+          <p class="label-small mb-4">Documentation</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-8">
+            Proof of Income Documentation
+          </h2>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-8">
+            You must prove that you receive the required passive income on a regular basis. Migraciones and consulates typically accept <strong class="text-charcoal font-normal">bank statements</strong> (often 6–12 months) showing deposits from rentals, dividends, or interest; <strong class="text-charcoal font-normal">rental contracts</strong> and proof of rent received (e.g. transfer receipts); <strong class="text-charcoal font-normal">investment or brokerage statements</strong>; or a <strong class="text-charcoal font-normal">certified accountant letter</strong> summarizing your passive income sources and amounts. Documents issued abroad must be <strong class="text-charcoal font-normal">apostilled</strong> (if your country is party to the Hague Convention) or <strong class="text-charcoal font-normal">legalized</strong> by the Argentine consulate, and documents not in Spanish must be <strong class="text-charcoal font-normal">translated into Spanish</strong> by a certified public translator (traductor público nacional).
+          </p>
+          <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-8">
+            Required documents typically include the following. Use this as a base and confirm the current list with Migraciones or your consulate.
+          </p>
+          <ul class="space-y-4">
+            {documents.map((doc) => (
+              <li class="flex items-start gap-4">
+                <svg class="w-5 h-5 text-bronze mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="font-sans text-base font-light text-gray-warm">{doc}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application steps -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury">
+        <div class="text-center mb-16">
+          <p class="label-small mb-4">Application process</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal">
+            Application Steps
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {steps.map((step) => (
+            <div class="bg-white p-8 border border-gray-border">
+              <p class="font-serif text-4xl text-bronze/30 mb-4">{step.number}</p>
+              <p class="font-sans text-[10px] font-normal tracking-luxury uppercase text-gray-light mb-2">{step.timeline}</p>
+              <h3 class="font-serif text-xl text-charcoal mb-3">{step.title}</h3>
+              <p class="font-sans text-sm font-light text-gray-warm leading-relaxed">
+                {step.description}
+              </p>
+            </div>
+          ))}
+        </div>
+        <p class="font-sans text-base font-light text-gray-warm mt-10 max-w-2xl mx-auto text-center">
+          Total time from starting documents to approval is often 3–6 months; processing can extend to 6–11 months in some cases. You can apply in Argentina via the RaDEX system after entry or start at an Argentine consulate abroad. Submitting a complete file with clear proof of passive income reduces delays.
+        </p>
+      </div>
+    </section>
+
+    <!-- Renewal & path to permanent residency -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div>
+            <p class="label-small mb-4">Renewal</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Renewal Process
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              The initial Rentista residency is usually granted for <strong class="text-charcoal font-normal">one year</strong>. Before it expires, you must apply for renewal through Migraciones (or the consulate if you are abroad). You will need to prove again that you still receive the required passive income, typically with updated bank statements, rental contracts, or investment statements, and that you meet character and other requirements.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              Renewals are often granted for a second and third year. Start the renewal process well before your current residency expires; late applications can create gaps in status. Documents may need to be recent (e.g. within the last few months); confirm with Migraciones.
+            </p>
+          </div>
+          <div>
+            <p class="label-small mb-4">Long-term status</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+              Path to Permanent Residency
+            </h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-6">
+              After the required period of <strong class="text-charcoal font-normal">temporary residency</strong> (typically three years of valid Rentista status, subject to current rules), you may apply for <strong class="text-charcoal font-normal">permanent residency</strong>. Migraciones will confirm that you have complied with the terms of your temporary residency and that you still meet the conditions for residence.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              Once you hold permanent residency, you can maintain it without renewing on the same one-year cycle. After <strong class="text-charcoal font-normal">two years of permanent residency</strong>, you may become eligible to apply for Argentine citizenship, subject to language proficiency and other requirements. The Rentista route therefore leads to permanent residency and then citizenship without requiring an active investment in Argentina.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison with Investor Visa -->
+    <section class="section-padding bg-charcoal">
+      <div class="container-luxury">
+        <div class="max-w-3xl mx-auto">
+          <p class="font-sans text-[11px] font-normal tracking-luxury uppercase text-white/50 mb-4">Comparison</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-white mb-8">
+            Rentista vs. Investor Visa
+          </h2>
+          <p class="font-sans text-base font-light text-white/80 leading-relaxed mb-8">
+            The Rentista and Inversionista (investor) visas both lead to temporary residency and eventually to permanent residency and citizenship, but they target different situations.
+          </p>
+          <div class="space-y-6">
+            <div class="border-l-2 border-bronze pl-6">
+              <h3 class="font-serif text-xl text-white mb-2">Rentista (passive income)</h3>
+              <p class="font-sans text-sm font-light text-white/70 leading-relaxed">
+                For people who live on passive income (rentals, dividends, interest) from assets they already own. No need to make a new investment or run a business in Argentina. You prove a minimum <em>monthly</em> income with bank statements, contracts, or accountant letters. No requirement to manage a local business.
+              </p>
+            </div>
+            <div class="border-l-2 border-white/20 pl-6">
+              <h3 class="font-serif text-xl text-white mb-2">Inversionista (investor)</h3>
+              <p class="font-sans text-sm font-light text-white/70 leading-relaxed">
+                For people who make a qualifying <em>investment</em> in a productive, commercial, or service activity in Argentina. You must prove the investment amount (e.g. ARS 1,500,000 or more) and its legal origin, and you are expected to manage or oversee the activity. Suited to those who want to invest capital in a local business or project rather than live on existing passive income.
+              </p>
+            </div>
+          </div>
+          <p class="font-sans text-sm font-light text-white/60 mt-8">
+            If your income is from employment or from running a business, neither category may fit; check other visa types (e.g. work visa, digital nomad) or consult Migraciones or a lawyer.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury">
+        <div class="text-center mb-16">
+          <p class="label-small mb-4">FAQ</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal">
+            Frequently Asked Questions
+          </h2>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-10">
+          {faqs.map((faq) => (
+            <div class="bg-white p-8 border border-gray-border">
+              <h3 class="font-serif text-xl text-charcoal mb-4">{faq.q}</h3>
+              <p class="font-sans text-base font-light text-gray-warm leading-relaxed">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding bg-white">
+      <div class="container-luxury text-center">
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-charcoal mb-6">
+          Discuss Your Rentista Visa Options
+        </h2>
+        <p class="font-sans text-base font-light text-gray-warm max-w-xl mx-auto mb-10">
+          Our team can help you understand income requirements, proof of income, and the application process for the Visa Rentista.
+        </p>
+        <a href="/contact" class="btn-luxury">
+          Get in Touch
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

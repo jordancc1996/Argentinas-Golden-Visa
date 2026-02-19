@@ -1,11 +1,14 @@
 ---
+import { Image } from 'astro:assets';
+
 const properties = [
   {
     id: 1,
     title: 'Palermo Soho Penthouse',
     location: 'Buenos Aires',
     price: 485000,
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
+    image: '/images/property-palermo-penthouse.jpg',
+    alt: 'Palermo Soho penthouse Buenos Aires, investor visa eligible property',
     beds: 3,
     baths: 2,
     sqm: 180,
@@ -15,7 +18,8 @@ const properties = [
     title: 'Vineyard Estate',
     location: 'Mendoza',
     price: 1250000,
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80',
+    image: '/images/property-vineyard-estate.jpg',
+    alt: 'Vineyard estate Mendoza Argentina, luxury property for residency investment',
     beds: 5,
     baths: 4,
     sqm: 450,
@@ -25,7 +29,8 @@ const properties = [
     title: 'Lakefront Villa',
     location: 'Bariloche',
     price: 890000,
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
+    image: '/images/property-lakefront-villa.jpg',
+    alt: 'Lakefront villa Bariloche Patagonia, eligible investment property',
     beds: 4,
     baths: 3,
     sqm: 320,
@@ -52,9 +57,8 @@ function formatPrice(price: number): string {
         Eligible Properties
       </h2>
       <div class="divider-light mb-8"></div>
-      <p class="font-sans text-base font-light text-gray-warm leading-relaxed max-w-xl mx-auto">
-        Curated selection of premium properties that qualify for Argentina's 
-        investor residency program.
+      <p class="font-sans text-base font-light text-gray-warm leading-relaxed max-w-2xl mx-auto">
+        A curated selection of premium properties that qualify for Argentina's investor residency program. When you invest in Argentina through qualifying real estate, you align your capital with your Argentina residency and Argentina golden visa goals. These are examples of the kind of assets that can support your application.
       </p>
     </div>
 
@@ -63,11 +67,14 @@ function formatPrice(price: number): string {
       {properties.map((property) => (
         <a href={`/property/${property.id}`} class="group block">
           <div class="card-luxury overflow-hidden">
-            <!-- Image -->
+            <!-- Image (below-fold, lazy) -->
             <div class="relative h-72 md:h-80 overflow-hidden">
-              <img
+              <Image
                 src={property.image}
-                alt={property.title}
+                alt={property.alt}
+                width={800}
+                height={600}
+                loading="lazy"
                 class="w-full h-full object-cover image-editorial image-zoom"
               />
             </div>

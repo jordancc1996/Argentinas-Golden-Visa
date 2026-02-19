@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import PageHero from '../components/PageHero.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="Privacy Policy — Your Data | Argentina's Golden Visa"
+  description="Privacy policy for Argentina's Golden Visa: what we collect, how we use it, cookies, third-party sharing, retention, your rights, and how to contact us."
+>
+  <Header />
+  <main>
+    <PageHero 
+      title="Privacy Policy"
+      subtitle="Legal"
+      description="How Argentina's Golden Visa collects, uses, and protects your information."
+      image="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80"
+      breadcrumbs={[{ label: 'Privacy', href: '/privacy' }]}
+    />
+
+    <section class="section-padding bg-white">
+      <div class="container-luxury max-w-3xl">
+        <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-12">
+          Argentina's Golden Visa ("we," "us," or "our") is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights regarding your data. It applies to visitors and users of our website and to anyone who contacts us or uses our services. We may update this policy from time to time; the current version will always be available on this page.
+        </p>
+
+        <div class="space-y-12">
+          <div>
+            <h2 class="font-serif text-2xl font-light text-charcoal mb-4">Information We Collect</h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-4">
+              We collect information you give us directly when you contact us, request a consultation, subscribe to our newsletter, or use our services. This may include your name, email address, phone number, country of residence, and any details you choose to share about your residency or investment plans.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              We also collect information automatically when you use our website, such as your IP address, browser type, device type, and pages you visit. This helps us understand how the site is used and improve it.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-serif text-2xl font-light text-charcoal mb-4">How We Use Your Information</h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-4">
+              We use the information we collect to respond to your enquiries, provide the services you request, send you relevant updates (e.g. about visas or guides) if you have opted in, and improve our website and services. We may also use it to comply with legal obligations or to protect our rights and the security of our users.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              We do not use your personal information for automated decision-making that significantly affects you without your consent or where otherwise permitted by law.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-serif text-2xl font-light text-charcoal mb-4">Cookies and Similar Technologies</h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-4">
+              Our website may use cookies and similar technologies (e.g. local storage) to remember your preferences, understand how you use the site, and improve performance. Essential cookies are necessary for the site to function; others may be used for analytics or marketing if you have agreed to them.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              You can control cookies through your browser settings. Disabling certain cookies may limit some features of the site.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-serif text-2xl font-light text-charcoal mb-4">Third-Party Sharing</h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-4">
+              We do not sell your personal information. We may share your information with service providers who help us operate our business (e.g. hosting, email delivery, analytics) under contracts that require them to protect your data and use it only for the purposes we specify.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              We may also share information when required by law, to protect our rights or safety, or in connection with a merger, sale, or other change of control of our business. If we share data with parties outside the European Economic Area, we take steps to ensure it is protected in line with applicable law (e.g. standard contractual clauses or other approved mechanisms).
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-serif text-2xl font-light text-charcoal mb-4">Data Retention</h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              We keep your personal information only as long as needed to fulfil the purposes described in this policy, to comply with legal or regulatory requirements, or to resolve disputes. When we no longer need it, we delete or anonymise it. You can ask us to delete your data earlier where the law allows (see "Your Rights" below).
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-serif text-2xl font-light text-charcoal mb-4">Your Rights (GDPR and Similar Laws)</h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-4">
+              If you are in the European Economic Area, the UK, or another jurisdiction that grants these rights, you may have the right to:
+            </p>
+            <ul class="list-disc list-inside font-sans text-base font-light text-gray-warm leading-relaxed space-y-2 mb-4">
+              <li><strong class="text-charcoal font-normal">Access</strong> — request a copy of the personal data we hold about you</li>
+              <li><strong class="text-charcoal font-normal">Rectification</strong> — ask us to correct inaccurate or incomplete data</li>
+              <li><strong class="text-charcoal font-normal">Erasure</strong> — ask us to delete your data in certain circumstances</li>
+              <li><strong class="text-charcoal font-normal">Restriction</strong> — ask us to limit how we use your data in certain circumstances</li>
+              <li><strong class="text-charcoal font-normal">Portability</strong> — receive your data in a structured, machine-readable format where applicable</li>
+              <li><strong class="text-charcoal font-normal">Object</strong> — object to processing based on our legitimate interests or for direct marketing</li>
+              <li><strong class="text-charcoal font-normal">Withdraw consent</strong> — where we rely on your consent, withdraw it at any time</li>
+            </ul>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-4">
+              You also have the right to lodge a complaint with a supervisory authority in your country (e.g. a data protection authority). We will not discriminate against you for exercising your rights.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              To exercise any of these rights, please contact us using the details under "Contact for Data Requests" below. We will respond within the time required by applicable law (e.g. one month under GDPR, where it applies).
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-serif text-2xl font-light text-charcoal mb-4">Contact for Data Requests</h2>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mb-4">
+              For any request related to your personal data—including access, correction, deletion, or other rights—please contact us:
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed">
+              <strong class="text-charcoal font-normal">Argentina's Golden Visa</strong><br />
+              Email: <a href="mailto:privacy@argentinasgoldenvisa.com" class="text-bronze hover:underline">privacy@argentinasgoldenvisa.com</a><br />
+              You can also use our general <a href="/contact" class="text-bronze hover:underline">contact page</a> and specify that your message is a data request.
+            </p>
+            <p class="font-sans text-base font-light text-gray-warm leading-relaxed mt-4">
+              We may need to verify your identity before processing your request. We will respond in line with applicable data protection law.
+            </p>
+          </div>
+        </div>
+
+        <p class="font-sans text-sm font-light text-gray-light mt-12 pt-8 border-t border-gray-border">
+          Last updated: February 2026. This privacy policy is provided for general information; it does not constitute legal advice. If you have questions about your rights under local law, please consult a qualified advisor.
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

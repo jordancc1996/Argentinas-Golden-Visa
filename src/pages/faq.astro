@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import PageHero from '../components/PageHero.astro';
+import Footer from '../components/Footer.astro';
+
+const faqs = [
+  // Investor Visa (5)
+  { q: 'What is the minimum investment for the Argentina Investor Visa?', a: 'The minimum investment is set in Argentine pesos: ARS 1,500,000. The equivalent in USD depends on the exchange rate at the time of application; confirm the current amount with Migraciones or your legal advisor. Investments must be in productive, commercial, or service activities of interest to the country, not passive real estate or donations.' },
+  { q: 'How long does the Investor Visa application take?', a: 'From submission to decision, processing often takes 2–4 months. Preparation of documents and the investment plan can add 1–2 months. Delays are possible if additional information is requested or if appointments are delayed.' },
+  { q: 'Can I work or run a business with the Investor Visa?', a: 'Yes. The Visa Inversionista is an active investor visa. You are expected to manage or oversee your investment and may work in the activity tied to your residency. It is a temporary residency that can be renewed and can lead to permanent residency and citizenship after meeting the usual residence and other requirements.' },
+  { q: 'Do I need to be in Argentina to apply?', a: 'You can start the process from abroad through an Argentine consulate, or apply in Argentina at the Dirección Nacional de Migraciones if you are already in the country on a valid stay. Requirements and procedures may differ slightly between consular and in-country filing.' },
+  { q: 'What happens after my temporary residency is granted?', a: 'Your initial residency is temporary (typically one to three years depending on the current regulations). You must maintain the investment and comply with residence and tax rules. After the required period of temporary residency (typically three years), you may apply for permanent residency. Citizenship may be possible after two years of residency, subject to language and other requirements.' },
+  // Retirement Visa (5)
+  { q: 'What is the minimum pension for the Argentina Retirement Visa?', a: 'The minimum pension is set in Argentine pesos. Migraciones typically requires at least ARS 30,000 per month (or the equivalent of approximately five times the Argentine minimum wage). The amount may be updated; confirm the current figure with Migraciones or your consulate. The pension must come from a government or international organization, not only from private savings or investments.' },
+  { q: 'Do my documents need to be apostilled and translated?', a: 'Yes. Documents issued abroad must be apostilled if your country is party to the Hague Convention, or legalized by the Argentine consulate in that country. Documents not in Spanish must be translated into Spanish by a certified public translator (traductor público nacional) in Argentina, and the translation must be legalized by the translators\' association. Consulates may accept translations done in your country if they meet local requirements.' },
+  { q: 'How long does the Pensionado visa application take?', a: 'From submission to decision, processing often takes 2–4 months. Document gathering, apostille, and translation can add 1–2 months. Delays are possible if additional information is requested or if appointment availability is limited. The initial visa is usually granted for one year and is renewable; after the required period of temporary residency (typically three years), you may apply for permanent residency.' },
+  { q: 'What healthcare options do retirees have in Argentina?', a: 'Legal residents can access the public health system, which provides free primary care, emergency services, and hospital care; wait times can be long. Many retirees also use private health insurance or pay out of pocket for private care, which is relatively affordable in major cities. Health insurance valid in Argentina is generally required for temporary residency; confirm the exact requirement with Migraciones or your consulate.' },
+  { q: 'Can I work with a Pensionado visa?', a: 'Pensionado (retirement) residency is for people who live on pension income. Rules on paid work vary: in practice, retirees may be allowed to work independently or run a business in some cases, but employment as an employee may be restricted. Confirm current rules with Migraciones or a lawyer before undertaking paid work.' },
+  // Rentista Visa (5)
+  { q: 'What is the minimum income for the Argentina Rentista Visa?', a: 'The minimum passive income is typically expressed as approximately five times the Argentine minimum wage, or about USD 1,500–2,000 per month per applicant. The amount in pesos (e.g. ARS 36,000–40,000 or more per month, depending on the year) is set by Migraciones and may be updated. Confirm the current figure with Migraciones or your consulate. Income must be from passive sources (rentals, investments, dividends), not from employment.' },
+  { q: 'What income sources qualify for the Rentista visa?', a: 'Qualifying sources include rental income from real estate, dividends or distributions from investments, interest from bank deposits or securities, and income from holdings or investments abroad where you do not perform active work. Salary, freelance work, or active business income in Argentina generally do not qualify. You must document the source and regularity of the income with bank statements, contracts, or certified accountant letters.' },
+  { q: 'How do I renew the Rentista visa and when can I apply for permanent residency?', a: 'The initial Rentista residency is usually granted for one year. You can renew it (often for a second and third year) by proving that you still receive the required passive income. After the required period of temporary residency (typically three years), you may apply for permanent residency. Citizenship may be possible after two years of permanent residency, subject to language and other requirements.' },
+  { q: 'What is the difference between the Rentista and Investor visas?', a: 'The Rentista visa is for people who live on passive income (rentals, dividends, interest) from existing assets; you do not need to run a business or make a new investment in Argentina. The Investor (Inversionista) visa requires a qualifying investment in a productive, commercial, or service activity in Argentina and is aimed at people who will manage or oversee that investment. Minimum amounts and proof differ: Rentista is based on monthly income; Investor is based on a one-time or deployed investment amount.' },
+  { q: 'Do I need to transfer money to an Argentine bank for the Rentista visa?', a: 'Migraciones or the consulate may require you to deposit the equivalent of two or three months of your declared income in an Argentine bank regulated by the Central Bank (BCRA). Requirements can vary by office and year. Confirm whether a transfer is required and the exact amount with Migraciones or your lawyer before applying.' },
+  // General / cross-cutting (5)
+  { q: 'How long until I can apply for Argentine citizenship?', a: 'After two years of legal residency in Argentina you may be eligible to apply for citizenship, subject to language proficiency and other requirements. Temporary residency (investor, retirement, rentista) counts toward this period once you have maintained status and met the conditions.' },
+  { q: 'When do I become an Argentine tax resident?', a: 'Under Argentine domestic law, you generally become a tax resident after 12 months of continuous legal residence, when your permanent home or centre of vital interests is in Argentina, or when you spend more time in Argentina than elsewhere in the calendar year. Immigration status and tax residency are separate; confirm with a local advisor.' },
+  { q: 'Which Argentina visa is right for me?', a: 'Investor visa: for those making a qualifying business or productive investment. Retirement (Pensionado): for those with a government or international pension. Rentista: for those with stable passive income (rentals, dividends). Compare minimum amounts, proof required, and whether you want to work or run a business. Our team can help you choose.' },
+  { q: 'Is health insurance required for Argentina residency?', a: 'Yes. Health insurance valid in Argentina is generally required for temporary residency applications (investor, retirement, rentista). Migraciones or the consulate will specify accepted coverage. As of 2025, visitors entering Argentina must also show proof of health insurance for their stay.' },
+  { q: 'Can foreigners open a bank account in Argentina?', a: 'Yes. With a precaria (temporary residence permit), passport, CUIL, and proof of address, you can open an account; public banks and some private or digital banks accept this. A DNI expands options. Funds should enter through authorized channels. See our banking guide for details.' },
+];
+
+const faqPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.a,
+    },
+  })),
+};
+---
+
+<BaseLayout
+  title="FAQs — Argentina Residency & Visas | Argentina's Golden Visa"
+  description="Frequently asked questions about Argentina investor, retirement and rentista visas, citizenship, tax residency, health insurance and banking. Get clear answers from Argentina's Golden Visa."
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqPageSchema)} />
+  </Fragment>
+  <Header />
+  <main>
+    <PageHero
+      title="Frequently Asked Questions"
+      subtitle="FAQs"
+      description="Answers to common questions about Argentina residency, investor and retirement visas, citizenship, and practical topics."
+      image="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80"
+      breadcrumbs={[{ label: 'FAQs', href: '/faq' }]}
+    />
+
+    <section class="section-padding bg-white">
+      <div class="container-luxury max-w-3xl">
+        <div class="space-y-10">
+          {faqs.map((faq) => (
+            <div class="border-b border-gray-border pb-10 last:border-0 last:pb-0">
+              <h2 class="font-serif text-xl text-charcoal mb-4">{faq.q}</h2>
+              <p class="font-sans text-base font-light text-gray-warm leading-relaxed">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-cream-light">
+      <div class="container-luxury text-center">
+        <p class="font-sans text-base font-light text-gray-warm mb-8">Still have questions? We can help you choose the right visa and plan your next steps.</p>
+        <a href="/contact" class="btn-luxury">Get in Touch</a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
