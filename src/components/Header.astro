@@ -172,14 +172,61 @@ const menuItems = [
     document.body.classList.toggle('overflow-hidden');
   });
 
-  // Language toggle
-  const langToggle = document.getElementById('lang-toggle');
-  let currentLang = 'EN';
+  // Language toggle: EN/ES with hero translation on homepage
+  const LANG_STORAGE_KEY = 'argentinasgoldenvisa-lang';
 
-  langToggle?.addEventListener('click', () => {
-    currentLang = currentLang === 'EN' ? 'ES' : 'EN';
-    langToggle.textContent = currentLang;
-  });
+  function getStoredLang() {
+    try {
+      const stored = localStorage.getItem(LANG_STORAGE_KEY);
+      return stored === 'es' ? 'es' : 'en';
+    } catch {
+      return 'en';
+    }
+  }
+
+  function setStoredLang(lang) {
+    try {
+      localStorage.setItem(LANG_STORAGE_KEY, lang);
+    } catch (_) {}
+  }
+
+  function applyHeroLang(lang) {
+    if (window.location.pathname !== '/' && window.location.pathname !== '') return;
+    const elements = [
+      'hero-label',
+      'hero-heading-1',
+      'hero-heading-2',
+      'hero-description',
+      'hero-cta-explore',
+      'hero-cta-book',
+      'hero-scroll-label',
+    ];
+    elements.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) {
+        const value = el.getAttribute('data-' + lang);
+        if (value) el.textContent = value;
+      }
+    });
+  }
+
+  const langToggle = document.getElementById('lang-toggle');
+  let currentLang = getStoredLang();
+
+  if (langToggle) {
+    langToggle.textContent = currentLang === 'en' ? 'EN' : 'ES';
+    document.addEventListener('DOMContentLoaded', () => {
+      applyHeroLang(currentLang);
+    });
+    if (document.readyState !== 'loading') applyHeroLang(currentLang);
+
+    langToggle.addEventListener('click', () => {
+      currentLang = currentLang === 'en' ? 'es' : 'en';
+      setStoredLang(currentLang);
+      langToggle.textContent = currentLang === 'en' ? 'EN' : 'ES';
+      applyHeroLang(currentLang);
+    });
+  }
 </script>
 
 <style>

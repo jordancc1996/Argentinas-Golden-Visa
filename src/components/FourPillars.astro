@@ -1,14 +1,12 @@
 ---
-import { Image } from 'astro:assets';
-
 const pillars = [
   {
     id: 'investor',
     title: 'Inversionista Visa',
     subtitle: 'Investor Residency',
     description: 'Obtain residency through a qualifying investment in an Argentine business or venture.',
-    image: '/images/investor-visa.png',
-    alt: 'Inversionista investor visa path to Argentina residency',
+    image: 'https://placehold.co/400x240/f5f0e8/2c2c2c?text=Investor+Visa',
+    alt: 'Argentina Inversionista (investor) visa — residency through qualifying investment in business or venture',
     href: '/visa/investor',
   },
   {
@@ -16,8 +14,8 @@ const pillars = [
     title: 'Pensionado Visa',
     subtitle: 'Retirement Visa',
     description: 'Designed for retirees with a monthly pension looking to enjoy life in Argentina.',
-    image: '/images/pensionado-visa.png',
-    alt: 'Pensionado retirement visa for retirees in Argentina',
+    image: 'https://placehold.co/400x240/f5f0e8/2c2c2c?text=Retirement+Visa',
+    alt: 'Argentina Pensionado (retirement) visa — residency for retirees with verifiable pension income',
     href: '/visa/retiree',
   },
   {
@@ -25,8 +23,8 @@ const pillars = [
     title: 'Rentista Visa',
     subtitle: 'Passive Income',
     description: 'For individuals with demonstrable passive income from investments or rental properties.',
-    image: '/images/rentista-visa.png',
-    alt: 'Rentista visa for passive income holders in Argentina',
+    image: 'https://placehold.co/400x240/f5f0e8/2c2c2c?text=Rentista+Visa',
+    alt: 'Argentina Rentista visa — residency for individuals with demonstrable passive income',
     href: '/visa/rentista',
   },
   {
@@ -34,8 +32,8 @@ const pillars = [
     title: 'Golden Visa',
     subtitle: 'Fast-Track Citizenship',
     description: 'After just 2 years of residency, become eligible for full Argentine citizenship.',
-    image: '/images/golden-visa.png',
-    alt: 'Golden visa fast-track to Argentine citizenship after residency',
+    image: 'https://placehold.co/400x240/f5f0e8/2c2c2c?text=Citizenship+Path',
+    alt: 'Argentina residency to citizenship — eligibility for Argentine citizenship after 2 years of residency',
     href: '/citizenship',
   },
 ];
@@ -63,11 +61,11 @@ const pillars = [
         <a href={pillar.href} class="group block bg-white">
           <div class="pillar-card">
             <!-- Image - z-index: 0 (below-fold, lazy) -->
-            <Image
+            <img
               src={pillar.image}
               alt={pillar.alt}
-              width={800}
-              height={550}
+              width={400}
+              height={240}
               loading="lazy"
               class="pillar-image"
             />
